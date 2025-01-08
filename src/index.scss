@@ -1,0 +1,10 @@
+// - tailwindcss
+@forward "tailwindcss/base";
+@forward "tailwindcss/components";
+@forward "tailwindcss/utilities";
+
+// - style
+@forward "./style/all";
+
+// - App
+@forward "./App";

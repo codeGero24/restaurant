@@ -1,0 +1,14 @@
+@keyframes rotate-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .is--rotating {
+    animation: logo-spin infinite 20s linear;
+  }
+}
