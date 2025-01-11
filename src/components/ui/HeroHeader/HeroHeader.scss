@@ -1,0 +1,14 @@
+.hero-header {
+  position: relative;
+  z-index: 8;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  background: linear-gradient(rgba(15, 23, 43, 0.75), rgba(15, 23, 43, 0.9)),
+    url("./img/bg-hero-header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
