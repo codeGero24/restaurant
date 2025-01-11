@@ -1,8 +1,9 @@
-@import 'variables';
-
-// - Customize Bootstrap
-@import 'custom.bootstrap';
+//- tailwindcss
+@forward "./tailwind";
 
 // - Outher style
-@import 'generic';
-@import './utilities/all';
+@forward "variables";
+@forward "generic";
+@forward "fonts";
+@forward "./utilities";
+@forward "./elements";
