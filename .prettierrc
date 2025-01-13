@@ -1,0 +1,13 @@
+{
+  "extends": ["stylelint-config-prettier-scss"],
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 90,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "plugins": ["prettier-plugin-tailwindcss"]
+}

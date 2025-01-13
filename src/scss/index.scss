@@ -1,9 +1,7 @@
 //- tailwindcss
-@forward "./tailwind";
+@forward 'tailwind';
 
 // - Outher style
-@forward "variables";
-@forward "generic";
-@forward "fonts";
-@forward "./utilities";
-@forward "./elements";
+@forward 'generic';
+@forward 'fonts';
+@forward 'elements';

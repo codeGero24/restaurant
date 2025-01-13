@@ -1,0 +1,16 @@
+@use 'functions' as *;
+
+h1,
+.h1 {
+  font-size: calc(um(22) + 1.5vw);
+}
+
+.h1-xl {
+  font-size: calc(um(22) + 3.3vw);
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: um(40);
+  }
+}

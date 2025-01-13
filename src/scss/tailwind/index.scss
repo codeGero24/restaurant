@@ -1,8 +1,8 @@
-@forward "tailwindcss/base";
-@forward "./custom-base-styles";
+@forward 'tailwindcss/base';
+@forward './custom-base-styles';
 
-@forward "tailwindcss/components";
-@forward "./custom-components";
+@forward 'tailwindcss/components';
+@forward './custom-components';
 
-@forward "tailwindcss/utilities";
-@forward "./custom-utilities";
+@forward 'tailwindcss/utilities';
+@forward './custom-utilities';

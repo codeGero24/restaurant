@@ -10,6 +10,7 @@
     // - Custom alias paths
     "baseUrl": "./",
     "paths": {
+      "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@pages/*": ["./src/pages/*"],
@@ -17,6 +18,8 @@
       "@scss/*": ["./src/scss/*"],
       "@services/*": ["./src/services/*"],
       "@stores/*": ["./src/stores/*"],
+      "@types.app/*": ["./src/types/*"],
+      "@utils/*": ["./src/utils/*"]
     },
 
     /* Bundler mode */

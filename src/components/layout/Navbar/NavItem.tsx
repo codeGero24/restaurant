@@ -1,11 +1,11 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-interface NavItemProps extends React.ComponentProps<"button"> {
-  name: string;
-  path: string;
-  className: string;
-  group?: string;
+interface NavItemProps extends React.ComponentProps<'button'> {
+  name: string
+  path: string
+  className: string
+  group?: string
 }
 
 const NavItem = React.memo(({ name, path, className }: NavItemProps) => {
@@ -13,7 +13,7 @@ const NavItem = React.memo(({ name, path, className }: NavItemProps) => {
     <NavLink to={path} className={className}>
       {name}
     </NavLink>
-  );
-});
+  )
+})
 
-export default NavItem;
+export default NavItem

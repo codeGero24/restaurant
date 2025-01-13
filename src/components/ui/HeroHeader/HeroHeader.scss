@@ -5,9 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 500px;
+  gap: 3rem;
   background: linear-gradient(rgba(15, 23, 43, 0.75), rgba(15, 23, 43, 0.9)),
-    url("./img/bg-hero-header.jpg");
+    url('./img/bg-hero-header.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

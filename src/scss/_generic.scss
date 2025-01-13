@@ -1,4 +1,4 @@
-@use "functions" as f;
+@use 'utils' as *;
 
 *,
 *::before,
@@ -8,16 +8,19 @@
 
 body {
   margin: 0;
-  font-family: "Heebo", sans-serif;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: $weight-normal;
   line-height: 1.5;
-  color: #666565;
+  color: $dove-gray;
+  background-color: $alice-blue;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: $white;
 }
 
 h1,
@@ -34,18 +37,8 @@ h6,
 .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  font-weight: $weight-xl;
   line-height: 1.2;
-  color: #0f172b;
-}
-
-h1 {
-  font-size: calc(f.um(22) + 1.5vw);
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: f.um(40);
-  }
+  color: $dark;
 }

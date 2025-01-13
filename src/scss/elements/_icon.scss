@@ -1,0 +1,13 @@
+@use '@scss/utils' as *;
+
+.icon {
+  width: calc(um(18) + 1.5vw);
+  height: calc(um(18) + 1.5vh);
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    width: calc(um(24) + 1.5vw);
+    height: calc(um(24) + 1.5vh);
+  }
+}

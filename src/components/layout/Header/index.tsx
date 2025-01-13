@@ -1,35 +1,24 @@
-import React from "react";
-import Logo from "@components/ui/Logo";
-import Navbar from "@components/layout/Navbar";
-import "./Header.scss";
-import { clsx } from "clsx";
-import HeroHeader from "@components/ui/HeroHeader";
+import React from 'react';
+import { clsx } from 'clsx';
+import Logo from '@components/ui/Logo';
+import Navbar from '@components/layout/Navbar';
+import HeroHeader from '@components/ui/HeroHeader';
+import useScroll from '@hooks/useScroll';
+import './Header.scss';
 
 const Header: React.FC = React.memo(() => {
-  const [isScrolled, setIsScrolled] = React.useState(false);
-
-  const handleScroll = React.useCallback(() => {
-    setIsScrolled(window.scrollY > 50);
-  }, []);
-
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+  const { isScrolled } = useScroll({ threshold: 50 });
 
   return (
     <>
-      <header id="l-header" className="relative lg:max-w-screen-xl lg:mx-auto">
+      <header id="l-header" className="relative lg:mx-auto lg:max-w-screen-xl">
         <div
-          className={clsx([
-            "flex flex-wrap items-center justify-between top-0 left-0 bg-dark w-full z-10 px-5 py-3 ",
-            "transition-all duration-500",
+          className={clsx(
+            'z-10 flex w-full flex-wrap items-center justify-between bg-dark px-5 py-3 transition-all duration-500',
             isScrolled
-              ? "fixed shadow-lg lg:bg-dark"
-              : "lg:absolute lg:bg-transparent"
-          ])}
+              ? 'fixed left-0 top-0 lg:shadow-lg'
+              : 'lg:absolute lg:bg-transparent'
+          )}
         >
           <Logo />
           <Navbar />
