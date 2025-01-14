@@ -8,18 +8,19 @@ export default {
     fontFamily: {
       nunito: ['Nunito', ...fontFamily.sans],
       heebo: ['Heebo', ...fontFamily.sans],
+      pacifico: ['Pacifico', ...fontFamily.sans],
     },
     screens: {
       sm: '480px',
       md: '768px',
       lg: '1024px',
-      xl: '1440px',
+      xl: '1540px',
     },
     extend: {
       colors: {
         primary: '#fea116',
         dark: '#0F172B',
-        white: '#fff',
+        light: '#f1f8ff',
       },
       animation: {
         'spin-slow': 'spin 30s linear infinite',

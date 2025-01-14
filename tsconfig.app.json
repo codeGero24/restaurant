@@ -10,6 +10,7 @@
     // - Custom alias paths
     "baseUrl": "./",
     "paths": {
+      "@mock/*": ["./src/__mock__/*"],
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],

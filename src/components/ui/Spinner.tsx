@@ -3,13 +3,13 @@ import { clsx } from 'clsx';
 import Icon from './Icon';
 
 interface SpinnerProps {
-  size?: string;
+  size?: number;
   color?: string;
   className?: string;
 }
 
 export default function Spinner({
-  size = 'h-16 w-16',
+  size = 16,
   color = 'text-primary',
   className = '',
 }: SpinnerProps) {
@@ -38,14 +38,15 @@ export default function Spinner({
     <div
       role="status"
       className={clsx(
-        'z-50 flex h-screen w-screen items-center justify-center bg-white',
+        'z-50 flex h-screen items-center justify-center bg-white',
         className,
         loading ? 'block' : 'hidden'
       )}
     >
       <Icon
         name="LoaderCircle"
-        className={clsx('lucide lucide-loader-circle animate-spin', size, color)}
+        size={size}
+        className={clsx('lucide lucide-loader-circle animate-spin', color)}
       />
       <span className="sr-only">Loading...</span>
     </div>

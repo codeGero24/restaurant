@@ -1,0 +1,21 @@
+@use '@scss/utils' as *;
+
+.footer {
+  &__section {
+    min-width: 25%;
+    h4 {
+      position: relative;
+      width: fit-content;
+    }
+    h4::after {
+      position: absolute;
+      content: '';
+      width: 45px;
+      height: 2px;
+      top: 50%;
+      right: -55px;
+      margin-top: -1px;
+      background: $primary;
+    }
+  }
+}
