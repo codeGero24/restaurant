@@ -11,12 +11,12 @@ const Header: React.FC = React.memo(() => {
 
   return (
     <>
-      <header id="l-header" className="relative lg:mx-auto lg:max-w-screen-xl">
+      <header id="l-header" className="lg:relative">
         <div
           className={clsx(
-            'z-10 flex w-full flex-wrap items-center justify-between bg-dark px-5 py-3 transition-all duration-500',
+            'left-0 top-0 z-10 flex w-full flex-wrap items-center justify-between bg-dark px-5 py-3',
             isScrolled
-              ? 'fixed left-0 top-0 lg:shadow-lg'
+              ? 'fixed animate-slide-in-down lg:shadow-lg'
               : 'lg:absolute lg:bg-transparent'
           )}
         >

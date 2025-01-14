@@ -40,13 +40,13 @@ export default function Navbar() {
       {isMobile && (
         <div
           className={clsx(
-            'w-full overflow-hidden border-t-[1.5px] border-gray-600 shadow-md transition-all duration-500',
+            'w-full overflow-hidden border-t-[1.5px] border-gray-600 transition-all duration-500',
             isOpenMenu
               ? 'mt-4 max-h-screen translate-y-0 pt-4 opacity-100'
               : 'max-h-0 translate-y-5 opacity-0'
           )}
         >
-          <ul className="flex flex-col gap-4">
+          <ul className="grid-col-1 grid gap-4">
             <NavPages />
           </ul>
         </div>

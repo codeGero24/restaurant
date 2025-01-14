@@ -7,17 +7,15 @@ import Spinner from '@components/ui/Spinner';
 export default function Root() {
   return (
     <>
-      <Spinner />
-      <Header />
-      <main id="main" className="mx-auto h-screen max-w-screen-xl">
-        <Outlet />
-      </main>
-      <main id="main" className="mx-auto h-screen max-w-screen-xl">
-        <Outlet />
-      </main>
-      <Footer />
-
-      <Button type="button" variant="sroll-up" />
+      <div className="mx-auto max-w-screen-xl">
+        <Spinner />
+        <Button type="button" variant="sroll-up" />
+        <Header />
+        <main id="l-main" className="bg-gray-50 min-h-screen">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

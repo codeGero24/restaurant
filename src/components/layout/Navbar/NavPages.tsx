@@ -86,13 +86,10 @@ export default function NavPages() {
           {...contactPage}
         />
       )}
-      <li className="py-2 lg:py-0">
+      <li className="py-2">
         <NavLink
           to="/"
-          className={clsx(
-            'w-1/2 rounded-sm bg-primary px-6 py-3 font-[500] uppercase lg:w-full',
-            'hover:brightness-110'
-          )}
+          className={clsx('button', 'w-1/2 px-6 py-3 font-[500] uppercase lg:w-full')}
         >
           Book A Table
         </NavLink>

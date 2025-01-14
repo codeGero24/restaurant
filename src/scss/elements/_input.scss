@@ -1,0 +1,26 @@
+@use '@scss/utils' as *;
+
+.input {
+  transition: all 0.15s ease-in-out;
+  border: 1px solid $primary;
+
+  &:focus {
+    color: $dove-gray;
+    background-color: $white;
+    border-color: $chardonnay;
+    outline: 0;
+    box-shadow: 0 0 0 6px rgba(254, 161, 22, 0.25);
+  }
+
+  & > .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: um(16) um(12);
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: all 0.15s ease-in-out;
+  }
+}

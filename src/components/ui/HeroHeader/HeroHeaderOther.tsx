@@ -10,7 +10,7 @@ const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
   return (
     <div className="hero-header lg:flex-50% mx-auto max-w-screen-xl flex-col px-5 py-20 lg:flex-row">
       <div className="hero-header__header text-center lg:text-left">
-        <h1 className="h1-xl animate-slide-in-down mb-4 font-bold text-white">{title}</h1>
+        <h1 className="h1-xl mb-4 animate-slide-in-down font-bold text-white">{title}</h1>
         <ul className="flex justify-center gap-2 text-lg text-white">
           <li className="cursor-pointer uppercase">
             <NavLink to="/" className="text-primary">

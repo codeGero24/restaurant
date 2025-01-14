@@ -4,18 +4,22 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
   font-family: 'Heebo', sans-serif;
   font-size: 1rem;
   font-weight: $weight-normal;
   line-height: 1.5;
   color: $dove-gray;
   background-color: $alice-blue;
-  overflow-x: hidden;
 }
 
 a {
