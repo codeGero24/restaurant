@@ -1,0 +1,13 @@
+@use '@scss/utils/variables' as *;
+
+.bck-card {
+  .icon {
+    color: $primary;
+  }
+
+  &:hover {
+    .icon {
+      color: $white;
+    }
+  }
+}
