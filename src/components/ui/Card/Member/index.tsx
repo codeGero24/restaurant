@@ -4,7 +4,7 @@ import Card from '@components/ui/Card';
 import Image from '@components/ui/Image';
 import Icon from '@components/ui/Icon';
 
-import { nameIcon } from '@types.app/ludice';
+import { type nameIcon } from '@types.app/ludice';
 
 type Social = {
   name: string;
@@ -19,11 +19,11 @@ export type Member = {
   socials: Social[];
 };
 
-interface MemberCardProps {
+interface CardMemberProps {
   member: Member;
 }
 
-const MemberCard = React.memo(({ member }: MemberCardProps) => {
+const CardMember = React.memo(({ member }: CardMemberProps) => {
   return (
     <>
       <Card.Root
@@ -64,4 +64,4 @@ const MemberCard = React.memo(({ member }: MemberCardProps) => {
   );
 });
 
-export default MemberCard;
+export default CardMember;
