@@ -1,8 +1,9 @@
+import TeamMembers from '@components/ui/TeamMembers';
 
 export default function AboutPage() {
   return (
     <>
-      <h1>About</h1>
+      <TeamMembers />
     </>
-  )
+  );
 }
