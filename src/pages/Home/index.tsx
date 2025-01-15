@@ -1,12 +1,10 @@
-import { clsx } from 'clsx';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
-import Card from '@components/ui/Card';
-import Icon from '@components/ui/Icon';
 import TeamMembers from '@components/ui/TeamMembers';
 import Section from '@components/layout/Section';
 import './Home.scss';
 
 import MOCK_DATA from '@mock/index';
+import CardService, { Service } from '@components/ui/Card/Service';
 
 export default function HomePage() {
   const { services } = MOCK_DATA;
@@ -15,28 +13,20 @@ export default function HomePage() {
     <>
       {/* SERVICES */}
       <Section>
-        {services.map((service, index) => (
+        {services.map((service: Service, index: number) => (
           <AnimationWrapper
             key={`service-${index}`}
             animation="animate-slide-in-up"
             delay={true}
           >
-            <Card.Root
-              {...service}
-              className={clsx(
-                'md:p-8',
-                'hover:bg-primary hover:text-white hover:transition-colors hover:duration-500 hover:ease-linear',
-              )}
-            >
-              <Icon {...service.icon} />
-            </Card.Root>
+            <CardService service={service} />
           </AnimationWrapper>
         ))}
       </Section>
       {/* ABOUT US */}
       {/* MENU */}
       <Section title="Food Menu" subTitle="Most Popilar Items">
-        tabs menu
+        .
       </Section>
       {/* RESERVATION */}
       {/* TEAM MEMBERS */}
