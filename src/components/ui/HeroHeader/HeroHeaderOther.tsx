@@ -1,3 +1,4 @@
+import AnimationWrapper from '@components/layout/AnimationWrapper';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -9,8 +10,14 @@ interface HeroHeaderProps {
 const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
   return (
     <div className="hero-header lg:flex-50% mx-auto max-w-screen-xl flex-col px-5 py-20 lg:flex-row">
-      <div className="hero-header__header text-center lg:text-left">
-        <h1 className="h1-xl mb-4 animate-slide-in-down font-bold text-white">{title}</h1>
+      <div className="text-center lg:text-left">
+        <AnimationWrapper
+          as="h1"
+          animation="animate-slide-in-down"
+          className="h1-xl mb-4 font-bold text-white"
+        >
+          {title}
+        </AnimationWrapper>
         <ul className="flex justify-center gap-2 text-lg text-white">
           <li className="cursor-pointer uppercase">
             <NavLink to="/" className="text-primary">

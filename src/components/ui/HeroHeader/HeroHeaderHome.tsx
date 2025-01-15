@@ -2,7 +2,6 @@ import React from 'react';
 import { clsx } from 'clsx';
 import { NavLink } from 'react-router-dom';
 import Image from '@components/ui/Image';
-import headerImg from '@assets/header-img.png';
 
 const HeroHeaderHome = React.memo(() => {
   return (
@@ -23,7 +22,7 @@ const HeroHeaderHome = React.memo(() => {
           to="/"
           className={clsx(
             'button',
-            'w-1/2 animate-slide-in-left px-4 py-2 uppercase lg:w-1/3 lg:py-5 lg:text-lg'
+            'w-1/2 animate-slide-in-left px-4 py-2 uppercase lg:w-1/3 lg:py-5 lg:text-lg',
           )}
         >
           Book A Table
@@ -31,7 +30,7 @@ const HeroHeaderHome = React.memo(() => {
       </div>
       <div className="w-4/5 lg:w-[45%]">
         <Image
-          src={headerImg}
+          src="/img/food.png"
           alt="grigliata"
           width={400}
           height={400}
