@@ -39,69 +39,65 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="mt-5 bg-dark px-4 pt-12 text-gray-100">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          {/* Company */}
-          <div className="footer__section">
-            <h4 className="font-pacifico mb-4 font-normal text-primary">
-              {company.name}
-            </h4>
-            <ul className="grid grid-cols-1 gap-2">{sectionCompany}</ul>
-          </div>
+    <footer className="mt-5 bg-dark px-4 pt-12 text-gray-100 lg:px-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        {/* Company */}
+        <div className="footer__section">
+          <h4 className="mb-4 font-pacifico font-normal text-primary">{company.name}</h4>
+          <ul className="grid grid-cols-1 gap-2">{sectionCompany}</ul>
+        </div>
 
-          {/* Contact */}
-          <div className="footer__section">
-            <h4 className="font-pacifico mb-4 font-normal text-primary">Contact</h4>
-            <ul className="grid grid-cols-1 gap-3">
-              <li>
-                <Icon name="MapPin" className="mr-2 inline" size={18} />
-                123 Street, New York, USA
-              </li>
-              <li>
-                <Icon name="Phone" className="mr-2 inline" size={18} />
-                +012 345 67890
-              </li>
-              <li>
-                <Icon name="Mail" className="mr-2 inline" size={18} />
-                info@example.com
-              </li>
-              <li className="flex gap-2">{sectionSocial}</li>
-            </ul>
-          </div>
+        {/* Contact */}
+        <div className="footer__section">
+          <h4 className="mb-4 font-pacifico font-normal text-primary">Contact</h4>
+          <ul className="grid grid-cols-1 gap-3">
+            <li>
+              <Icon name="MapPin" className="mr-2 inline" size={18} />
+              123 Street, New York, USA
+            </li>
+            <li>
+              <Icon name="Phone" className="mr-2 inline" size={18} />
+              +012 345 67890
+            </li>
+            <li>
+              <Icon name="Mail" className="mr-2 inline" size={18} />
+              info@example.com
+            </li>
+            <li className="flex gap-2">{sectionSocial}</li>
+          </ul>
+        </div>
 
-          {/* Opening */}
-          <div className="footer__section">
-            <h4 className="font-pacifico mb-4 font-normal text-primary">Opening</h4>
-            <ul className="grid grid-cols-1 gap-2">
-              <li>
-                <p className="font-nunito text-xl">Monday - Friday</p> 9:00 - 22:00
-              </li>
-              <li>
-                <p className="font-nunito text-xl">Saturday - Sunday</p> 10:00 - 24:00
-              </li>
-            </ul>
-          </div>
+        {/* Opening */}
+        <div className="footer__section">
+          <h4 className="mb-4 font-pacifico font-normal text-primary">Opening</h4>
+          <ul className="grid grid-cols-1 gap-2">
+            <li>
+              <p className="font-nunito text-xl">Monday - Friday</p> 9:00 - 22:00
+            </li>
+            <li>
+              <p className="font-nunito text-xl">Saturday - Sunday</p> 10:00 - 24:00
+            </li>
+          </ul>
+        </div>
 
-          {/* Newsletter */}
-          <div className="footer__section">
-            <h4 className="font-pacifico mb-4 font-normal text-primary">Newsletter</h4>
-            <div className="grid grid-cols-1 gap-4">
-              <p>Subscribe to our newsletter to get the latest updates.</p>
-              <form className="relative">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className={clsx('input', 'w-full rounded-sm bg-gray-100 p-4')}
-                />
-                <button
-                  type="submit"
-                  className={clsx('button', 'absolute right-2 top-2 p-2 uppercase')}
-                >
-                  Signup
-                </button>
-              </form>
-            </div>
+        {/* Newsletter */}
+        <div className="footer__section">
+          <h4 className="mb-4 font-pacifico font-normal text-primary">Newsletter</h4>
+          <div className="grid grid-cols-1 gap-4">
+            <p>Subscribe to our newsletter to get the latest updates.</p>
+            <form className="relative">
+              <input
+                type="email"
+                placeholder="Your Email"
+                className={clsx('input', 'w-full rounded-sm bg-gray-100 p-4')}
+              />
+              <button
+                type="submit"
+                className={clsx('button', 'absolute right-2 top-2 p-2 uppercase')}
+              >
+                Signup
+              </button>
+            </form>
           </div>
         </div>
       </div>

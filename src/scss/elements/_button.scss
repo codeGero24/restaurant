@@ -1,4 +1,5 @@
-@use '@scss/utils' as *;
+@use '@scss/utils/variables' as *;
+@use '@scss/utils/functions' as *;
 
 .button {
   display: inline-flex;

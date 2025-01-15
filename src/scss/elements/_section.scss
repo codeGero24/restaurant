@@ -1,0 +1,28 @@
+@use '@scss/utils/variables' as *;
+
+.section {
+  &-title {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 um(16);
+    width: fit-content;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 45px;
+      height: 2px;
+      top: 50%;
+      margin-top: -1px;
+      background: $primary;
+    }
+
+    &::before {
+      right: -55px;
+    }
+    &::after {
+      left: -55px;
+    }
+  }
+}

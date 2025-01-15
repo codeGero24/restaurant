@@ -1,40 +1,36 @@
 export const services = [
   {
-    description: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
     icon: {
       name: 'UserRoundCog',
-      className: 'text-primary',
-      size: 48,
+      className: 'icon md',
       strokeWidth: '2.5px',
     },
     title: 'Master Chefs',
   },
   {
-    description: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
     icon: {
       name: 'Utensils',
-      className: 'text-primary',
-      size: 48,
+      className: 'icon md',
       strokeWidth: '2.5px',
     },
     title: 'Quality Food',
   },
   {
-    description: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
     icon: {
       name: 'ShoppingCart',
-      className: 'text-primary',
-      size: 48,
+      className: 'icon md',
       strokeWidth: '2.5px',
     },
     title: 'Online Order',
   },
   {
-    description: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
     icon: {
       name: 'Headset',
-      className: 'text-primary',
-      size: 48,
+      className: 'icon md',
       strokeWidth: '2.5px',
     },
     title: '24/7 Service',

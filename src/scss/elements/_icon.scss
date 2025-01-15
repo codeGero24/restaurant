@@ -1,13 +1,25 @@
-@use '@scss/utils' as *;
+@use '@scss/utils/functions' as *;
+@use '@scss/utils/variables' as *;
 
 .icon {
   width: calc(um(18) + 1.5vw);
   height: calc(um(18) + 1.5vh);
+
+  &.md {
+    width: calc(um(24) + 1.5vw);
+    height: calc(um(24) + 1.5vw);
+  }
 }
 
 @media (min-width: 1024px) {
   .icon {
     width: calc(um(24) + 1.5vw);
     height: calc(um(24) + 1.5vh);
+
+    &.md {
+      width: calc(um(28) + 1.5vw);
+      height: calc(um(28) + 1.5vw);
+    }
   }
+  
 }

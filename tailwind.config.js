@@ -1,5 +1,4 @@
-const { fontFamily, colors } = require('tailwindcss/defaultTheme');
-const Unfonts = require('unplugin-fonts');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -23,6 +22,7 @@ export default {
         light: '#f1f8ff',
       },
       animation: {
+        'fede-in': 'fede-in 1s ease-out',
         'spin-slow': 'spin 30s linear infinite',
         'slide-in-up': 'slide-in-up 1s both',
         'slide-in-down': 'slide-in-down 1s both',
@@ -30,6 +30,10 @@ export default {
         'slide-in-left': 'slide-in-left 1s both',
       },
       keyframes: {
+        'fede-in': {
+          '0%': { opacity: '0', transform: 'translate3d(0,20px,0)' },
+          '100%': { opacity: '1', transform: 'translateZ(0)' },
+        },
         'slide-in-left': {
           '0%': {
             transform: 'translate3d(-100%,0,0)',
@@ -48,18 +52,18 @@ export default {
             transform: 'translateZ(0)',
           },
         },
-        'slide-in-right': {
+        'slide-in-up': {
           '0%': {
-            transform: 'translate3d(100%,0,0)',
+            transform: 'translate3d(0,100%,0)',
             visibility: 'visible',
           },
           '100%': {
             transform: 'translateZ(0)',
           },
         },
-        'slide-in-up': {
+        'slide-in-right': {
           '0%': {
-            transform: 'translate3d(0,100%,0)',
+            transform: 'translate3d(100%,0,0)',
             visibility: 'visible',
           },
           '100%': {
