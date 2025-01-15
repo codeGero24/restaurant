@@ -1,8 +1,11 @@
+import Section from '@components/layout/Section';
 
 export default function TestimonialPage() {
   return (
     <>
-      <h1>Testimonial</h1>
+      <Section title="Testimonial" subTitle="Our Clients Say">
+        {/* Carousel */}-
+      </Section>
     </>
-  )
+  );
 }

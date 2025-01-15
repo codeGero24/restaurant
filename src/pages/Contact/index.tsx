@@ -1,8 +1,14 @@
+import Section from '@components/layout/Section';
 
 export default function ContactPage() {
   return (
     <>
-      <h1>Contact</h1>
+      <Section title="Contact Us" subTitle="Contact For Any Query">
+        {/* Tab Content */}
+        -
+        {/* Map */}
+        {/* FORM Content */}
+      </Section>
     </>
-  )
+  );
 }
