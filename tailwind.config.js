@@ -23,6 +23,7 @@ export default {
       },
       animation: {
         'fede-in': 'fede-in 1s ease-out',
+        'fede-in-low': 'fede-in-low 1s ease-out',
         'spin-slow': 'spin 30s linear infinite',
         'slide-in-up': 'slide-in-up 1s both',
         'slide-in-down': 'slide-in-down 1s both',
@@ -32,6 +33,10 @@ export default {
       keyframes: {
         'fede-in': {
           '0%': { opacity: '0', transform: 'translate3d(0,20px,0)' },
+          '100%': { opacity: '1', transform: 'translateZ(0)' },
+        },
+        'fede-in-low': {
+          '0%': { opacity: '0.5', transform: 'translate3d(0,0,0)' },
           '100%': { opacity: '1', transform: 'translateZ(0)' },
         },
         'slide-in-left': {

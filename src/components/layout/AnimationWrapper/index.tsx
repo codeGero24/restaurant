@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 type animation =
   | 'animate-fede-in'
+  | 'animate-fede-in-low'
   | 'animate-slide-in-up'
   | 'animate-slide-in-down'
   | 'animate-slide-in-right'

@@ -11,7 +11,7 @@ export default function Root() {
         <Spinner />
         <Button type="button" variant="sroll-up" />
         <Header />
-        <main id="l-main" className="bg-gray-50 min-h-screen">
+        <main id="l-main" className="bg-gray-50">
           <Outlet />
         </main>
         <Footer />

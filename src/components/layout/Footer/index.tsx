@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Icon from '@components/ui/Icon';
 import { company, socials } from '@mock/footer';
 import './Footer.scss';
+import AnimationWrapper from '../AnimationWrapper';
 
 export default function Footer() {
   const sectionCompany = React.useMemo(() => {
@@ -39,7 +40,12 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="mt-5 bg-dark px-4 pt-12 text-gray-100 lg:px-8">
+    <AnimationWrapper
+      as="footer"
+      animation="animate-fede-in-low"
+      duration="duration-[1000ms]"
+      className="mt-5 bg-dark px-4 pt-12 text-gray-100 lg:px-8"
+    >
       <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
         {/* Company */}
         <div className="footer__section">
@@ -125,6 +131,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-    </footer>
+    </AnimationWrapper>
   );
 }
