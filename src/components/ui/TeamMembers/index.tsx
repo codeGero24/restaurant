@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '@components/layout/Section';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
-import MemberCard, { type Member } from '@components/ui/Card/Member';
+import CardMember, { type Member } from '@components/ui/Card/Member';
 
 import MOCK_DATA from '@mock/index';
 
@@ -20,7 +20,7 @@ const TeamMembers: React.FC<TeamMembersProps> = React.memo(({ members }) => {
           animation="animate-slide-in-up"
           delay={true}
         >
-          <MemberCard member={member} />
+          <CardMember member={member} />
         </AnimationWrapper>
       ))}
     </Section>
