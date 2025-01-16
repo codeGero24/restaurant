@@ -3,6 +3,7 @@ import { clsx } from 'clsx';
 import { NavLink } from 'react-router-dom';
 import Image from '@components/ui/Image';
 import Icon from '@components/ui/Icon';
+import CardHighlight from '@components/ui/Card/Highlight';
 import Section from '@components/layout/Section';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
 
@@ -16,10 +17,10 @@ interface AboutUsProps {
 
 const AboutUs: React.FC<AboutUsProps> = React.memo(({ aboutData }) => {
   const aboutUs = aboutData || ABOUT_DATA;
-  console.log(aboutUs);
 
   return (
     <Section.Root classNameContent='grid grid-cols-1 px-4 items-center gap-12 lg:grid-cols-2'>
+      {/* ABOUT US - IMAGES */}
       <Section.Content className='grid grid-cols-2 gap-4'>
         {aboutUs.images.map((image, index) => {
           const img160 = [1, 2].includes(index);
@@ -39,6 +40,8 @@ const AboutUs: React.FC<AboutUsProps> = React.memo(({ aboutData }) => {
           );
         })}
       </Section.Content>
+
+      {/* ABOUT US - INFO */}
       <Section.Content>
         <Section.Header className='mb-6 grid grid-cols-1 gap-2' animation='animate-none'>
           <p className='section-title left-none font-pacifico text-2xl text-primary'>
@@ -66,7 +69,10 @@ const AboutUs: React.FC<AboutUsProps> = React.memo(({ aboutData }) => {
             justo magna dolore erat amet
           </p>
 
-          {}
+          <div className='grid grid-cols-1 lg:grid-cols-2'>
+            <CardHighlight {...aboutUs.experience} />
+            <CardHighlight {...aboutUs.popularMembers} />
+          </div>
 
           <NavLink
             to='/about'

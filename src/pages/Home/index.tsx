@@ -7,6 +7,7 @@ import AnimationWrapper from '@components/layout/AnimationWrapper';
 import { Service } from '@types.app/data';
 // - Mock
 import { SERVICES } from '@mock/index';
+import AboutUs from '@components/ui/AboutUs';
 
 export default function HomePage() {
   return (
@@ -24,9 +25,10 @@ export default function HomePage() {
         ))}
       </Section.Root>
       {/* ABOUT US */}
+      <AboutUs />
       {/* MENU */}
       <Section.Root title='Food Menu' subtitle='Most Popilar Items'>
-        .
+        
       </Section.Root>
       {/* RESERVATION */}
       {/* TEAM MEMBERS */}

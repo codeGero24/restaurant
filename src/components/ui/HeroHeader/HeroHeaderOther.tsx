@@ -9,7 +9,7 @@ interface HeroHeaderProps {
 
 const HeroHeaderOther = React.memo(({ title, name }: HeroHeaderProps) => {
   return (
-    <div className='hero-header lg:flex-50% mx-auto max-w-screen-xl flex-col px-5 py-20 lg:flex-row'>
+    <div className='hero-header mx-auto min-h-[400px] max-w-screen-xl flex-col px-5 py-20 lg:flex-row'>
       <div className='text-center lg:text-left'>
         <AnimationWrapper
           as='h1'

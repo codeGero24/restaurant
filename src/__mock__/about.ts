@@ -22,11 +22,11 @@ export const ABOUT_DATA: AboutUs = {
   experience: {
     title: 'Years of',
     subtitle: 'Experience',
-    rate: '10+',
+    rate: '15',
   },
   popularMembers: {
     title: 'Popular',
     subtitle: 'Master Chefs',
-    rate: '50+',
+    rate: '50',
   },
 };
