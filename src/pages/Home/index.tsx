@@ -2,7 +2,6 @@ import TeamMembers from '@components/ui/TeamMembers';
 import CardService from '@components/ui/Card/Service';
 import Section from '@components/layout/Section';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
-import './Home.scss';
 
 // - Types
 import { Service } from '@types.app/data';

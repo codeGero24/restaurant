@@ -4,7 +4,6 @@ import useDevice from '@hooks/useDevice';
 import Icon from '@components/ui/Icon';
 import Button from '@components/ui/Button';
 import NavPages from './NavPages';
-import './Navbar.scss';
 
 export default function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = React.useState<boolean>(false);

@@ -4,7 +4,6 @@ import Logo from '@components/ui/Logo';
 import Navbar from '@components/layout/Navbar';
 import HeroHeader from '@components/ui/HeroHeader';
 import useScroll from '@hooks/useScroll';
-import './Header.scss';
 
 const Header: React.FC = React.memo(() => {
   const { isScrolled } = useScroll({ threshold: 50 });
