@@ -23,7 +23,9 @@ export default {
       },
       animation: {
         'fede-in': 'fede-in 1s ease-out',
-        'fede-in-low': 'fede-in-low 1s ease-out',
+        'fede-in-slow': 'fede-in-slow 1.5s ease-out',
+        'zoom-in': 'zoom-in 1s both',
+        'zoom-out': 'zoom-out 1s both',
         'spin-slow': 'spin 30s linear infinite',
         'slide-in-up': 'slide-in-up 1s both',
         'slide-in-down': 'slide-in-down 1s both',
@@ -35,9 +37,30 @@ export default {
           '0%': { opacity: '0', transform: 'translate3d(0,20px,0)' },
           '100%': { opacity: '1', transform: 'translateZ(0)' },
         },
-        'fede-in-low': {
+        'fede-in-slow': {
           '0%': { opacity: '0.5', transform: 'translate3d(0,0,0)' },
           '100%': { opacity: '1', transform: 'translateZ(0)' },
+        },
+        'zoom-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'scale3d(0.3, 0.3, 0.3)',
+          },
+          '50%': {
+            opacity: '1',
+          },
+        },
+        'zoom-out': {
+          '0%': {
+            opacity: '1',
+          },
+          '50%': {
+            opacity: '1',
+            transform: 'scale3d(0.3, 0.3, 0.3)',
+          },
+          '100%': {
+            opacity: '0',
+          },
         },
         'slide-in-left': {
           '0%': {

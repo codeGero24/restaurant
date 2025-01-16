@@ -1,4 +1,5 @@
-import { Company, Social } from '@types.app/index';
+import { Company, social } from '@types.app/index';
+import { generateSocials } from './generate.data';
 
 export const COMPANY: Company = {
   name: 'Company',
@@ -26,34 +27,6 @@ export const COMPANY: Company = {
   ],
 };
 
-export const SOCIAL_FOOTER: Social[] = [
-  {
-    name: 'facebook',
-    icon: {
-      name: 'Facebook',
-    },
-    link: 'https://www.facebook.com/',
-  },
-  {
-    name: 'twitter',
-    icon: {
-      name: 'Twitter',
-    },
-    link: 'https://twitter.com/',
-  },
-  {
-    name: 'youtube',
-    icon: {
-      name: 'Youtube',
-    },
-
-    link: 'https://www.youtibe.com/',
-  },
-  {
-    name: 'linkedin',
-    icon: {
-      name: 'Linkedin',
-    },
-    link: 'https://www.linkedin.com/',
-  },
-];
+const idSocial = 'peoplefirst';
+const socials = ['facebook', 'twitter', 'youtube', 'linkedin'];
+export const SOCIAL_FOOTER: social[] = generateSocials(idSocial, socials);
