@@ -15,6 +15,7 @@ const CardMember = React.memo(({ member }: CardMemberProps) => {
     <>
       <Card.Root
         className={clsx(
+          'grid cursor-pointer grid-cols-1 gap-2 rounded-md bg-white p-4 shadow-sm md:p-6',
           'h-[calc(100%-40px)] place-items-center overflow-hidden pb-0 md:pb-0',
           'hover:h-[100%] hover:transition-all hover:duration-500 hover:ease-linear'
         )}

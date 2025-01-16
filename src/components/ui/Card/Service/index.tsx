@@ -1,6 +1,5 @@
 import React from 'react';
-import { clsx } from 'clsx';
-import Card from '@components/ui/Card';
+import Card, { getStyle } from '@components/ui/Card';
 import Icon from '@components/ui/Icon';
 
 // - Types
@@ -15,7 +14,8 @@ const CardService = React.memo(({ service }: CardServiceProps) => {
     <>
       <Card.Root
         {...service}
-        className={clsx(
+        className={getStyle(
+          'wrapper',
           'hover:bg-primary hover:text-white hover:transition-colors hover:duration-500 hover:ease-linear'
         )}
       >

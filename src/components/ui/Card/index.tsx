@@ -12,26 +12,41 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   subtitle?: string;
   description?: string;
   className?: string;
-  children?: React.ReactNode;
 }
 
-const Card = ({ className, title, subtitle, children, ...props }: CardProps) => {
-  return (
-    <div
-      className={clsx(
-        'bck-card',
-        'grid cursor-pointer grid-cols-1 gap-2 rounded-md bg-white p-4 shadow-sm',
-        'md:p-6',
+type part = 'wrapper';
+
+export const getStyle = (part: part, className?: string | string[]) => {
+  switch (part) {
+    case 'wrapper':
+      return clsx(
+        'grid cursor-pointer grid-cols-1 gap-2 rounded-md bg-white p-4 shadow-sm md:p-6',
         className
-      )}
-      {...props}
-    >
-      {children}
-      {title && <CardTitle title={title} />}
-      {subtitle && <CardSubtitle subtitle={subtitle} />}
-    </div>
-  );
+      );
+
+    default:
+      return '';
+  }
 };
+
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, title, subtitle, ...props }, ref) => {
+    const customClassName = React.useMemo(() => {
+      return (
+        className ||
+        'grid cursor-pointer grid-cols-1 gap-2 rounded-md bg-white p-4 shadow-sm md:p-6'
+      );
+    }, [className]);
+
+    return (
+      <div ref={ref} className={clsx('bck-card', customClassName)} {...props}>
+        {props.children}
+        {title && <CardTitle title={title} />}
+        {subtitle && <CardSubtitle subtitle={subtitle} />}
+      </div>
+    );
+  }
+);
 
 Card.displayName = 'Card';
 

@@ -46,7 +46,7 @@ export type popularMembers = {
 };
 
 // --------------------
-// - Type img
+// - Interface img
 // --------------------
 export interface Img extends HTMLAttributes<HTMLImageElement> {
   src: string;
@@ -88,4 +88,15 @@ export interface AboutUs {
   images: Img[];
   experience: experience;
   popularMembers: popularMembers;
+}
+
+// --------------------
+// - Interface Testimonial
+// --------------------
+interface Testimonial {
+  id: string | number;
+  review: string;
+  name: string;
+  profession: string;
+  img: Img;
 }

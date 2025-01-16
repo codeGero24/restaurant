@@ -1,11 +1,9 @@
-import Section from '@components/layout/Section';
+import Testimonial from '@components/ui/Testimonial';
 
 export default function TestimonialPage() {
   return (
     <>
-      <Section.Root title='Testimonial' subtitle='Our Clients Say'>
-        {/* Carousel */}
-      </Section.Root>
+      <Testimonial className='py-12' />
     </>
   );
 }

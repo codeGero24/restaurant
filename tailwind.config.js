@@ -20,6 +20,7 @@ export default {
         primary: '#fea116',
         dark: '#0F172B',
         light: '#f1f8ff',
+        geyser: '#DEE2E6',
       },
       animation: {
         'fede-in': 'fede-in 1s ease-out',

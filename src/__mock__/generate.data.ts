@@ -1,4 +1,4 @@
-import { Img, Member, social } from '@types.app/index';
+import { Img, Member, Testimonial, social } from '@types.app/index';
 // --------------------------
 // - Function Generate data
 // --------------------------
@@ -39,5 +39,19 @@ export const generateMember = (limit: number): Member[] => {
     name: `Full Name ${i + 1}`,
     role: 'Designation',
     socials: generateSocials(i + 1),
+  }));
+};
+
+export const generateTestimonial = (limit: number): Testimonial[] => {
+  return Array.from({ length: limit }, (_, i) => ({
+    id: i + 1,
+    img: {
+      src: generatePathImg('testimonial', i + 1),
+      alt: `testimonial-${i + 1}`,
+    },
+    name: `Client Name ${i + 1}`,
+    profession: 'Profession',
+    review:
+      'Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam',
   }));
 };
