@@ -2,13 +2,15 @@ import React from 'react';
 import { clsx } from 'clsx';
 import { NavLink } from 'react-router-dom';
 import Icon from '@components/ui/Icon';
-import { company, socials } from '@mock/footer';
+import AnimationWrapper from '@components/layout/AnimationWrapper';
 import './Footer.scss';
-import AnimationWrapper from '../AnimationWrapper';
+
+// - Mock
+import { COMPANY, SOCIAL_FOOTER } from '@mock/index';
 
 export default function Footer() {
   const sectionCompany = React.useMemo(() => {
-    return company.links.map((item, index) => (
+    return COMPANY.links.map((item, index) => (
       <li
         key={`company-${index}`}
         className="capitalize transition-all duration-500 hover:tracking-[1px]"
@@ -22,7 +24,7 @@ export default function Footer() {
   }, []);
 
   const sectionSocial = React.useMemo(() => {
-    return socials.map(social => (
+    return SOCIAL_FOOTER.map(social => (
       <a
         href={social.link}
         target="_blank"
@@ -30,11 +32,7 @@ export default function Footer() {
         key={`social-${social.name}`}
         className="flex h-[36px] w-[36px] items-center justify-center rounded-[50%] border-[1px] border-white p-[4px] transition-all hover:bg-white"
       >
-        <Icon
-          name={social.icon as 'Facebook' | 'Twitter' | 'Youtube' | 'Linkedin'}
-          className="hover:text-primary"
-          size={22}
-        />
+        <Icon name={social.icon.name} className="hover:text-primary" size={22} />
       </a>
     ));
   }, []);
@@ -42,14 +40,13 @@ export default function Footer() {
   return (
     <AnimationWrapper
       as="footer"
-      animation="animate-fede-in-low"
-      duration="duration-[1000ms]"
+      animation="animate-fede-in-slow"
       className="mt-5 bg-dark px-4 pt-12 text-gray-100 lg:px-8"
     >
       <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
         {/* Company */}
         <div className="footer__section">
-          <h4 className="mb-4 font-pacifico font-normal text-primary">{company.name}</h4>
+          <h4 className="mb-4 font-pacifico font-normal text-primary">{COMPANY.name}</h4>
           <ul className="grid grid-cols-1 gap-2">{sectionCompany}</ul>
         </div>
 

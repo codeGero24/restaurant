@@ -1,12 +1,12 @@
-import MOCK_DATA from '@mock/index';
 import TeamMembers from '@components/ui/TeamMembers';
 
-export default function OurTeamPage() {
-  const { members } = MOCK_DATA;
+// - Mock
+import { MEMBERS } from '@mock/index';
 
+export default function OurTeamPage() {
   return (
     <>
-      <TeamMembers members={members.concat(members)} />
+      <TeamMembers members={MEMBERS.concat(MEMBERS)} />
     </>
   );
 }

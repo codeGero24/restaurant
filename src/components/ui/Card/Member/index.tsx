@@ -4,21 +4,8 @@ import Card from '@components/ui/Card';
 import Image from '@components/ui/Image';
 import Icon from '@components/ui/Icon';
 
-import { type nameIcon } from '@types.app/ludice';
-
-type Social = {
-  name: string;
-  icon: nameIcon;
-  link: string;
-};
-
-export type Member = {
-  img: string;
-  name: string;
-  role: string;
-  socials: Social[];
-};
-
+// - Types
+import { Member } from '@types.app/index';
 interface CardMemberProps {
   member: Member;
 }
@@ -53,7 +40,7 @@ const CardMember = React.memo(({ member }: CardMemberProps) => {
                 )}
               >
                 <a href={social.link} target="_blank" rel="noreferrer">
-                  <Icon size={24} className="h-[24px] w-[24px]" name={social.icon} />
+                  <Icon size={24} className="h-[24px] w-[24px]" name={social.icon.name} />
                 </a>
               </li>
             ))}

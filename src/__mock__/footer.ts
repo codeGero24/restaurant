@@ -1,4 +1,6 @@
-export const company = {
+import { Company, Social } from '@types.app/index';
+
+export const COMPANY: Company = {
   name: 'Company',
   links: [
     {
@@ -24,25 +26,34 @@ export const company = {
   ],
 };
 
-export const socials = [
+export const SOCIAL_FOOTER: Social[] = [
   {
     name: 'facebook',
-    icon: 'Facebook',
+    icon: {
+      name: 'Facebook',
+    },
     link: 'https://www.facebook.com/',
   },
   {
     name: 'twitter',
-    icon: 'Twitter',
+    icon: {
+      name: 'Twitter',
+    },
     link: 'https://twitter.com/',
   },
   {
     name: 'youtube',
-    icon: 'Youtube',
+    icon: {
+      name: 'Youtube',
+    },
+
     link: 'https://www.youtibe.com/',
   },
   {
     name: 'linkedin',
-    icon: 'Linkedin',
+    icon: {
+      name: 'Linkedin',
+    },
     link: 'https://www.linkedin.com/',
   },
 ];

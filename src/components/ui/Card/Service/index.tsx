@@ -3,19 +3,8 @@ import { clsx } from 'clsx';
 import Card from '@components/ui/Card';
 import Icon from '@components/ui/Icon';
 
-import { type nameIcon } from '@types.app/ludice';
-
-type IconType = {
-  name: nameIcon;
-  className: string;
-  strokeWidth: string;
-};
-
-export type Service = {
-  title: string;
-  subtitle: string;
-  icon: IconType;
-};
+// - Types
+import { Service } from '@types.app/index';
 
 interface CardServiceProps {
   service: Service;

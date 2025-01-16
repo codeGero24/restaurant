@@ -1,17 +1,17 @@
 import Section from '@components/layout/Section';
-import CardService, { type Service } from '@components/ui/Card/Service';
+import CardService from '@components/ui/Card/Service';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
 
-// - MOCK DATA
-import MOCK_DATA from '@mock/index';
+// - Types
+import { Service } from '@types.app/index';
+// - MOCK
+import { SERVICES } from '@mock/index';
 
 export default function ServicePage() {
-  const { services } = MOCK_DATA;
-
   return (
     <>
       <Section title="Services" subTitle="Our Services">
-        {services.concat(services).map((service: Service, index: number) => (
+        {SERVICES.concat(SERVICES).map((service: Service, index: number) => (
           <AnimationWrapper
             key={`service-${index}`}
             animation="animate-slide-in-up"

@@ -1,22 +1,30 @@
-export const generateSocials = (idUser: string) => [
+import { Member, Social } from '@types.app/index';
+
+export const generateSocials = (idUser: string): Social[] => [
   {
     name: 'facebook',
-    icon: 'Facebook',
+    icon: {
+      name: 'Facebook',
+    },
     link: `https://www.facebook.com/${idUser}`,
   },
   {
     name: 'twitter',
-    icon: 'Twitter',
+    icon: {
+      name: 'Twitter',
+    },
     link: `https://www.twitter.com/${idUser}`,
   },
   {
     name: 'instagram',
-    icon: 'Instagram',
+    icon: {
+      name: 'Instagram',
+    },
     link: `https://www.instagram.com/${idUser}`,
   },
 ];
 
-export const generateUser = (limit: number) => {
+export const generateUser = (limit: number): Member[] => {
   return Array.from({ length: limit }, (_, i) => ({
     id: i + 1,
     img: `https://themewagon.github.io/restoran/img/team-${i + 1}.jpg`,
@@ -34,4 +42,4 @@ const userMe = {
   socials: generateSocials('michaelmess_97'),
 };
 
-export const members = [userMe, ...generateUser(3)];
+export const MEMBERS = [userMe, ...generateUser(3)] as Member[];

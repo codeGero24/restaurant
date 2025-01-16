@@ -1,4 +1,6 @@
-export const services = [
+import { Service } from '@types.app/index';
+
+export const SERVICES: Service[] = [
   {
     subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
     icon: {
