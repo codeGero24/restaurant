@@ -1,22 +1,28 @@
 import React from 'react';
-import AnimationWrapper from '../AnimationWrapper';
+import AnimationWrapper, { AnimationWrapperProps } from '../AnimationWrapper';
 
-interface SectionHeaderProps {
+interface SectionHeaderProps extends AnimationWrapperProps {
   title?: string;
-  subTitle?: string;
+  subtitle?: string;
 }
 
-const SectionHeader = React.memo(({ title, subTitle }: SectionHeaderProps) => {
-  if (!title && !subTitle) return <></>;
+const SectionHeader = React.memo(({ title, subtitle, ...props }: SectionHeaderProps) => {
+  const animation = props.animation || 'animate-slide-in-up';
+  const duration = props.duration || 'duration-[500ms]';
+  const className = props.duration || 'pb-12 text-center';
 
   return (
     <AnimationWrapper
-      animation="animate-slide-in-up"
-      duration="duration-[500ms]"
-      className="pb-12 text-center"
+      animation={animation}
+      duration={duration}
+      className={className}
+      {...props}
     >
-      <p className="section-title font-pacifico text-xl text-primary">{title}</p>
-      <h1>{subTitle}</h1>
+      {title && (
+        <p className='section-title font-pacifico text-xl text-primary'>{title}</p>
+      )}
+      {subtitle && <h1>{subtitle}</h1>}
+      {props.children}
     </AnimationWrapper>
   );
 });

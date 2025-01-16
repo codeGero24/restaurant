@@ -27,15 +27,15 @@ const Image: React.FC<ImageProps> = ({
   return (
     <figure className={className}>
       <picture>
-        {srcSet && <source srcSet={srcSet} type="image/webp" />}
+        {srcSet && <source srcSet={srcSet} type='image/webp' />}
         <img
           src={src}
           alt={alt}
           width={width}
           height={height}
           loading={lazyLoad ? 'lazy' : 'eager'}
-          decoding="async"
-          className="h-auto w-full"
+          decoding='async'
+          className='h-auto w-full'
           srcSet={srcSet}
           {...primitive}
         />

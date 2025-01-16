@@ -22,7 +22,7 @@ const Card = ({ className, title, subtitle, children, ...props }: CardProps) => 
         'bck-card',
         'grid cursor-pointer grid-cols-1 gap-2 rounded-md bg-white p-4 shadow-sm',
         'md:p-6',
-        className,
+        className
       )}
       {...props}
     >

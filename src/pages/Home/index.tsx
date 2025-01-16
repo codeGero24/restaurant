@@ -13,22 +13,22 @@ export default function HomePage() {
   return (
     <>
       {/* SERVICES */}
-      <Section>
+      <Section.Root>
         {SERVICES.map((service: Service, index: number) => (
           <AnimationWrapper
             key={`service-${index}`}
-            animation="animate-slide-in-up"
+            animation='animate-slide-in-up'
             delay={true}
           >
             <CardService service={service} />
           </AnimationWrapper>
         ))}
-      </Section>
+      </Section.Root>
       {/* ABOUT US */}
       {/* MENU */}
-      <Section title="Food Menu" subTitle="Most Popilar Items">
+      <Section.Root title='Food Menu' subtitle='Most Popilar Items'>
         .
-      </Section>
+      </Section.Root>
       {/* RESERVATION */}
       {/* TEAM MEMBERS */}
       <TeamMembers />

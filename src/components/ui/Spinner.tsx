@@ -36,7 +36,7 @@ export default function Spinner({
 
   return (
     <div
-      role="status"
+      role='status'
       className={clsx(
         'z-50 flex h-screen items-center justify-center bg-white',
         className,
@@ -44,11 +44,11 @@ export default function Spinner({
       )}
     >
       <Icon
-        name="LoaderCircle"
+        name='LoaderCircle'
         size={size}
         className={clsx('lucide lucide-loader-circle animate-spin', color)}
       />
-      <span className="sr-only">Loading...</span>
+      <span className='sr-only'>Loading...</span>
     </div>
   );
 }

@@ -16,17 +16,17 @@ const TeamMembers: React.FC<TeamMembersProps> = React.memo(({ members }) => {
   const teamMembers = members || MEMBERS;
 
   return (
-    <Section title="Team Members" subTitle="Our Team Members">
+    <Section.Root title='Team Members' subtitle='Our Team Members'>
       {teamMembers.map((member, index) => (
         <AnimationWrapper
           key={`member-${index}`}
-          animation="animate-slide-in-up"
+          animation='animate-slide-in-up'
           delay={true}
         >
           <CardMember member={member} />
         </AnimationWrapper>
       ))}
-    </Section>
+    </Section.Root>
   );
 });
 

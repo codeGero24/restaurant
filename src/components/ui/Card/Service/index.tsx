@@ -16,10 +16,10 @@ const CardService = React.memo(({ service }: CardServiceProps) => {
       <Card.Root
         {...service}
         className={clsx(
-          'hover:bg-primary hover:text-white hover:transition-colors hover:duration-500 hover:ease-linear',
+          'hover:bg-primary hover:text-white hover:transition-colors hover:duration-500 hover:ease-linear'
         )}
       >
-        <Card.Header className="mb-4">
+        <Card.Header className='mb-4'>
           <Icon {...service.icon} />
         </Card.Header>
       </Card.Root>

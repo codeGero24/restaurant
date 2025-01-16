@@ -5,8 +5,7 @@ import { useInView } from 'react-intersection-observer';
 // - Types
 import { animation, duration } from '@types.app/animation';
 
-interface AnimationWrapperProps {
-  children: React.ReactNode;
+export interface AnimationWrapperProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType;
   className?: string;
   animation?: animation;
@@ -17,7 +16,6 @@ interface AnimationWrapperProps {
 }
 
 const AnimationWrapper = ({
-  children,
   className,
   as: TagHtml = 'div',
   animation = 'animate-fede-in-slow',
@@ -25,6 +23,7 @@ const AnimationWrapper = ({
   duration = 'duration-[1000ms]',
   threshold = 0.1,
   triggerOnce = true,
+  ...props
 }: AnimationWrapperProps) => {
   const { ref, inView } = useInView({
     threshold,
@@ -40,7 +39,7 @@ const AnimationWrapper = ({
       ref={ref as React.Ref<HTMLElement>}
       className={clsx(animationClass, className)}
     >
-      {children}
+      {props.children}
     </TagHtml>
   );
 };

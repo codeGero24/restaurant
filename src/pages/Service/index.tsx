@@ -10,17 +10,17 @@ import { SERVICES } from '@mock/index';
 export default function ServicePage() {
   return (
     <>
-      <Section title="Services" subTitle="Our Services">
+      <Section.Root title='Services' subtitle='Our Services'>
         {SERVICES.concat(SERVICES).map((service: Service, index: number) => (
           <AnimationWrapper
             key={`service-${index}`}
-            animation="animate-slide-in-up"
+            animation='animate-slide-in-up'
             delay={true}
           >
             <CardService service={service} />
           </AnimationWrapper>
         ))}
-      </Section>
+      </Section.Root>
     </>
   );
 }

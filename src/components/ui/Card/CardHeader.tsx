@@ -6,7 +6,7 @@ interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
 }
 
-function CardHeader({ className, children, ...props }: CardHeaderProps) {
+const CardHeader = React.memo(({ className, children, ...props }: CardHeaderProps) => {
   const customClassName = React.useMemo(() => {
     return clsx('', className);
   }, [className]);
@@ -16,7 +16,7 @@ function CardHeader({ className, children, ...props }: CardHeaderProps) {
       {children}
     </div>
   );
-}
+});
 
 CardHeader.displayName = 'CardHeader';
 

@@ -14,10 +14,10 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex w-1/3 justify-end lg:w-2/3">
+      <nav className='flex w-1/3 justify-end lg:w-2/3'>
         {/* NavPages - Desktop */}
         {isDesktop && (
-          <ul className="flex items-center justify-between gap-6">
+          <ul className='flex items-center justify-between gap-6'>
             <NavPages />
           </ul>
         )}
@@ -25,14 +25,14 @@ export default function Navbar() {
         {/* Burget Menu - Mobile*/}
         {isMobile && (
           <Button
-            type="button"
+            type='button'
             className={clsx(
               'rounded-lg border-[1px] border-gray-600 px-3 py-1',
               'focus:ring-4 focus:ring-white focus:ring-opacity-10'
             )}
             onClick={toggleMenu}
           >
-            <Icon name="Menu" className="icon" />
+            <Icon name='Menu' className='icon' />
           </Button>
         )}
       </nav>
@@ -46,7 +46,7 @@ export default function Navbar() {
               : 'max-h-0 translate-y-5 opacity-0'
           )}
         >
-          <ul className="grid-col-1 grid gap-4">
+          <ul className='grid-col-1 grid gap-4'>
             <NavPages />
           </ul>
         </div>

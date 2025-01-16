@@ -11,7 +11,7 @@ const Header: React.FC = React.memo(() => {
 
   return (
     <>
-      <header id="l-header" className="lg:relative">
+      <header id='l-header' className='lg:relative'>
         <div
           className={clsx(
             'left-0 top-0 z-10 flex w-full flex-wrap items-center justify-between bg-dark px-5 py-3',

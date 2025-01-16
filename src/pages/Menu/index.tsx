@@ -3,9 +3,7 @@ import Section from '@components/layout/Section';
 export default function MenuPage() {
   return (
     <>
-      <Section title="Food Menu" subTitle="Most Popilar Items">
-        tabs menu
-      </Section>
+      <Section.Root title='Food Menu' subtitle='Most Popilar Items'></Section.Root>
     </>
   );
 }

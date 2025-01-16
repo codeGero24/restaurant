@@ -1,12 +1,11 @@
 import React from 'react';
 
-interface SectionContentProps {
-  children: React.ReactNode;
+interface SectionContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
-const SectionContent = React.memo(({ className, children }: SectionContentProps) => {
-  return <div className={className}>{children}</div>;
+const SectionContent = React.memo(({ className, ...props }: SectionContentProps) => {
+  return <div className={className}>{props.children}</div>;
 });
 
 export default SectionContent;

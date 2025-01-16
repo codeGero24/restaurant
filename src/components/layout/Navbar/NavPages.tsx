@@ -31,10 +31,10 @@ export default function NavPages() {
         />
       ))}
       {pagesGroup.map(([nameGroup, pagesGroup]) => (
-        <li key={nameGroup} className="relative">
+        <li key={nameGroup} className='relative'>
           <Button
-            type="button"
-            className="font-[500] uppercase text-white hover:text-primary"
+            type='button'
+            className='font-[500] uppercase text-white hover:text-primary'
             {...(isDesktop
               ? {
                   onMouseEnter: togglePages,
@@ -45,7 +45,7 @@ export default function NavPages() {
                 })}
           >
             {nameGroup}
-            <Icon name="ChevronDown" className="inline" size={20} />
+            <Icon name='ChevronDown' className='inline' size={20} />
           </Button>
           <ul
             className={clsx(
@@ -86,9 +86,9 @@ export default function NavPages() {
           {...contactPage}
         />
       )}
-      <li className="py-2">
+      <li className='py-2'>
         <NavLink
-          to="/"
+          to='/'
           className={clsx('button', 'w-1/2 px-6 py-3 font-[500] uppercase lg:w-full')}
         >
           Book A Table
