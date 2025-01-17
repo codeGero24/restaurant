@@ -61,7 +61,7 @@ const FormReservation = React.memo(
           </div>
           <div className='relative w-[99.5%]'>
             <textarea id='notes' name='notes' className='textarea' maxLength={256} />
-            <label htmlFor='email' className='label'>
+            <label htmlFor='notes' className='label'>
               Special Request
             </label>
           </div>

@@ -46,6 +46,17 @@ export type popularMembers = {
 };
 
 // --------------------
+// - Type Tab
+// --------------------
+
+export type Tab = TabInfo;
+
+export type TabInfo = {
+  title: string;
+  content: string;
+};
+
+// --------------------
 // - Interface img
 // --------------------
 export interface Img extends HTMLAttributes<HTMLImageElement> {
@@ -93,7 +104,7 @@ export interface AboutUs {
 // --------------------
 // - Interface Testimonial
 // --------------------
-interface Testimonial {
+export interface Testimonial {
   id: string | number;
   review: string;
   name: string;
