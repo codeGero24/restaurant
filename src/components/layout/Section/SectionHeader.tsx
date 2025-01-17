@@ -9,7 +9,7 @@ interface SectionHeaderProps extends AnimationWrapperProps {
 const SectionHeader = React.memo(({ title, subtitle, ...props }: SectionHeaderProps) => {
   const animation = props.animation || 'animate-slide-in-up';
   const duration = props.duration || 'duration-[500ms]';
-  const className = props.duration || 'pb-12 text-center';
+  const className = props.className || 'pb-12 text-center';
 
   return (
     <AnimationWrapper

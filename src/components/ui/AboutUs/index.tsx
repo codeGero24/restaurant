@@ -50,9 +50,9 @@ const AboutUs: React.FC<AboutUsProps> = React.memo(({ aboutData }) => {
           <h1>
             Welcome to
             <Icon
-              className='icon mx-2 inline-block text-primary'
+              className='icon mx-1 inline-block text-primary'
               strokeWidth={'2.5px'}
-              name='Utensils'
+              name='UtensilsCrossed'
             />
             Restoran
           </h1>
