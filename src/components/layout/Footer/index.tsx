@@ -89,14 +89,16 @@ export default function Footer() {
           <div className='grid grid-cols-1 gap-4'>
             <p>Subscribe to our newsletter to get the latest updates.</p>
             <form className='relative'>
-              <input
-                type='email'
-                placeholder='Your Email'
-                className={clsx('input', 'w-full rounded-sm bg-gray-100 p-4')}
-              />
+              <div className='relative w-full'>
+                <input type='email' name='email-newsletter' className='input' />
+                <label htmlFor='email-newsletter' className='label text-gray-800'>
+                  Your Email
+                </label>
+              </div>
+
               <button
                 type='submit'
-                className={clsx('button', 'absolute right-2 top-2 p-2 uppercase')}
+                className={clsx('button', 'absolute right-2 top-3 p-2 uppercase')}
               >
                 Signup
               </button>
