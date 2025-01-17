@@ -4,7 +4,6 @@ import AnimationWrapper from '@components/layout/AnimationWrapper';
 
 /* Types */
 import { animation } from '@types.app/index';
-import { formatDate } from '@utils/index';
 
 interface FormContactProps {
   className?: string;
@@ -13,8 +12,6 @@ interface FormContactProps {
 const FormContact = React.memo(
   ({ className, animation = 'animate-slide-in-up' }: FormContactProps) => {
     const classNameCustom = className || 'flex flex-wrap gap-3 lg:grid-cols-2';
-    const defaulDateValue = formatDate(new Date());
-    console.log(defaulDateValue);
 
     return (
       <AnimationWrapper as='form' animation={animation} className={classNameCustom}>

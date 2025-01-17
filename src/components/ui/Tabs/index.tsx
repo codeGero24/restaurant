@@ -5,11 +5,12 @@ import { Tab } from '@types.app/data';
 
 export interface TabsProps<T> {
   tabs: T[];
-  variant: 'info';
+  variant: 'info' | 'menu';
   className?: string;
 }
 
 const TabInfo = React.lazy(() => import('./TabInfo'));
+const TabMenu = React.lazy(() => import('./TabMenu'));
 
 const Tabs = React.memo<TabsProps<Tab>>(({ className, variant, tabs }) => {
   const classNameCustom = className || 'grid grid-cols-1 md:grid-cols-3';
@@ -18,7 +19,8 @@ const Tabs = React.memo<TabsProps<Tab>>(({ className, variant, tabs }) => {
     switch (variant) {
       case 'info':
         return TabInfo;
-
+      case 'menu':
+        return TabMenu;
       default:
         return;
     }

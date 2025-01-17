@@ -1,10 +1,10 @@
 import React from 'react';
 import { clsx } from 'clsx';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
+import { formatDate } from '@utils/index';
 
 /* Types */
 import { animation } from '@types.app/index';
-import { formatDate } from '@utils/index';
 
 interface FormReservationProps {
   className?: string;
@@ -14,7 +14,6 @@ const FormReservation = React.memo(
   ({ className, animation = 'animate-slide-in-up' }: FormReservationProps) => {
     const classNameCustom = className || 'flex flex-wrap gap-4 lg:grid-cols-2';
     const defaulDateValue = formatDate(new Date());
-    console.log(defaulDateValue);
 
     return (
       <AnimationWrapper as='form' animation={animation} className={classNameCustom}>

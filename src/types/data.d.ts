@@ -49,11 +49,17 @@ export type popularMembers = {
 // - Type Tab
 // --------------------
 
-export type Tab = TabInfo;
+export type Tab = TabInfo | TabMenu;
 
 export type TabInfo = {
   title: string;
   content: string;
+};
+
+export type TabMenu = {
+  title: string;
+  content: string;
+  nameIcon: nameIcon;
 };
 
 // --------------------
