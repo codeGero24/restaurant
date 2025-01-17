@@ -9,6 +9,7 @@ import { Service } from '@types.app/data';
 import { SERVICES } from '@mock/index';
 import AboutUs from '@components/ui/AboutUs';
 import Testimonial from '@components/ui/Testimonial';
+import Reservation from '@components/ui/Reservation';
 
 export default function HomePage() {
   return (
@@ -30,6 +31,7 @@ export default function HomePage() {
       {/* MENU */}
       <Section.Root title='Food Menu' subtitle='Most Popilar Items'></Section.Root>
       {/* RESERVATION */}
+      <Reservation />
       {/* TEAM MEMBERS */}
       <TeamMembers />
       {/* TESTIMONIAL */}

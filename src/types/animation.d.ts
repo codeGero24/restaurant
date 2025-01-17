@@ -3,6 +3,7 @@ export type animation =
   | 'animate-spin'
   | 'animate-ping'
   | 'animate-pulse'
+  | 'animate-pulse-border'
   | 'animate-bounce'
   | 'animate-fede-in'
   | 'animate-fede-in-slow'

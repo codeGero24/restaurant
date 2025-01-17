@@ -11,7 +11,6 @@ interface CarouselProps<T> {
 const Carousel = <T,>({ data, Slide, autoPlayInterval = 0 }: CarouselProps<T>) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = React.useState<number>(0);
-  console.log(data);
 
   React.useEffect(() => {
     if (!emblaApi) return;

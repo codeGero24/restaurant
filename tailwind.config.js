@@ -27,6 +27,7 @@ export default {
         'fede-in-slow': 'fede-in-slow 1.5s ease-out',
         'zoom-in': 'zoom-in 1s both',
         'zoom-out': 'zoom-out 1s both',
+        'pulse-border': 'pulse-border 3s linear infinite',
         'spin-slow': 'spin 30s linear infinite',
         'slide-in-up': 'slide-in-up 1s both',
         'slide-in-down': 'slide-in-down 1s both',
@@ -61,6 +62,16 @@ export default {
           },
           '100%': {
             opacity: '0',
+          },
+        },
+        'pulse-border': {
+          '0%': {
+            opacity: '1',
+            transform: 'translateX(-50%) translateY(-50%) translateZ(0) scale(1)',
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)',
           },
         },
         'slide-in-left': {

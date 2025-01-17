@@ -1,5 +1,7 @@
 import React from 'react';
+import { clsx } from 'clsx';
 import CardTestimonial from '@components/ui/Card/Testimonial';
+import Carousel from '@components/ui/Carousel';
 import Section from '@components/layout/Section';
 
 // - Types
@@ -7,8 +9,6 @@ import type { animation, Testimonial } from '@types.app/index';
 // - Mock
 import { TESTIMONIAL } from '@mock/index';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
-import Carousel from '../Carousel';
-import { clsx } from 'clsx';
 
 interface TestimonialProps {
   animation?: animation;

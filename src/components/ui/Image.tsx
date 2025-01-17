@@ -20,7 +20,7 @@ const Image: React.FC<ImageProps> = ({
   srcSet,
   caption = '',
   className = '',
-  figcaptionClassName = 'text-center text-sm text-gray-600 mt-2',
+  figcaptionClassName = 'text-center text-sm text-gray-600',
   lazyLoad = true,
   ...primitive
 }) => {
