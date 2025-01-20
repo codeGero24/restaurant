@@ -46,20 +46,33 @@ export type popularMembers = {
 };
 
 // --------------------
+// - Type Plate
+// --------------------
+export type plate = {
+  id: string | number;
+  img: Img;
+  name: string;
+  prince: string | number;
+  description: string;
+};
+
+// --------------------
 // - Type Tab
 // --------------------
 
-export type Tab = TabInfo | TabMenu;
+export type tab = tabInfo | tabMenu;
 
-export type TabInfo = {
+export type tabInfo = {
   title: string;
   content: string;
 };
 
-export type TabMenu = {
+export type tabMenu = {
+  id: 'breakfast' | 'launch' | 'dinner';
   title: string;
   content: string;
   nameIcon: nameIcon;
+  isActive: boolean;
 };
 
 // --------------------
@@ -116,4 +129,14 @@ export interface Testimonial {
   name: string;
   profession: string;
   img: Img;
+}
+
+// --------------------
+// - Interface Menu
+// --------------------
+export interface Menu {
+  tabs: tabMenu[];
+  breakfast: plate[];
+  launch: plate[];
+  dinner: plate[];
 }

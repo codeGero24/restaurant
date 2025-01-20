@@ -1,4 +1,4 @@
-import { Img, Member, Testimonial, social } from '@types.app/index';
+import { Img, Member, Testimonial, plate, social } from '@types.app/index';
 // --------------------------
 // - Function Generate data
 // --------------------------
@@ -53,5 +53,18 @@ export const generateTestimonial = (limit: number): Testimonial[] => {
     profession: 'Profession',
     review:
       'Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam',
+  }));
+};
+
+export const generateMenu = (limit: number): plate[] => {
+  return Array.from({ length: limit }, (_, i) => ({
+    id: i + 1,
+    img: {
+      src: generatePathImg('menu', i + 1),
+      alt: `menu-${i + 1}`,
+    },
+    name: `Chicken Burger ${i + 1}`,
+    description: 'Ipsum ipsum clita erat amet dolor justo diam',
+    prince: '115',
   }));
 };
