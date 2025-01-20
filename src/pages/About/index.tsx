@@ -1,5 +1,5 @@
-import AboutUs from '@components/ui/AboutUs';
-import TeamMembers from '@components/ui/TeamMembers';
+import AboutUs from '@components/AboutUs';
+import TeamMembers from '@components/TeamMembers';
 
 import { MEMBERS } from '@mock/index';
 

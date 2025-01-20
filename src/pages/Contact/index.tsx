@@ -1,6 +1,6 @@
 import Section from '@components/layout/Section';
 import FormContact from '@components/ui/Form/Contact';
-import Maps from '@components/ui/Maps';
+import Maps from '@components/Maps';
 import Tabs from '@components/ui/Tabs';
 import { tabsContact } from '@mock/index';
 

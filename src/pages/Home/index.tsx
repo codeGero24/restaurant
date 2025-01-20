@@ -1,9 +1,9 @@
 import CardService from '@components/ui/Card/Service';
-import AboutUs from '@components/ui/AboutUs';
-import Tabs from '@components/ui/Tabs';
-import Reservation from '@components/ui/Reservation';
-import TeamMembers from '@components/ui/TeamMembers';
-import Testimonial from '@components/ui/Testimonial';
+import AboutUs from '@components/AboutUs';
+import Reservation from '@components/Reservation';
+import TeamMembers from '@components/TeamMembers';
+import Testimonial from '@components/Testimonial';
+import MenuSection from '@components/MenuSection';
 
 import Section from '@components/layout/Section';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
@@ -11,7 +11,7 @@ import AnimationWrapper from '@components/layout/AnimationWrapper';
 // - Types
 import { Service } from '@types.app/data';
 // - Mock
-import { SERVICES, tabsMenu } from '@mock/index';
+import { SERVICES } from '@mock/index';
 
 export default function HomePage() {
   return (
@@ -31,17 +31,7 @@ export default function HomePage() {
       {/* ABOUT US */}
       <AboutUs />
       {/* MENU */}
-      <Section.Root
-        title='Food Menu'
-        subtitle='Most Popilar Items'
-        classNameContent='grid grid-cols-1 gap-4'
-      >
-        <Tabs
-          tabs={tabsMenu}
-          variant='menu'
-          className='mx-auto flex items-center justify-center border-b-[1px]'
-        />
-      </Section.Root>
+      <MenuSection />
       {/* RESERVATION */}
       <Reservation />
       {/* TEAM MEMBERS */}

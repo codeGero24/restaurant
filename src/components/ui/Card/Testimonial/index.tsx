@@ -1,6 +1,6 @@
 import React from 'react';
 import Card, { getStyle } from '@components/ui/Card';
-import Icon from '@components/ui/Icon';
+import SolidIcon from '@components/ui/Icon/Solid';
 import Image from '@components/ui/Image';
 
 // - Types
@@ -21,12 +21,13 @@ const CardTestimonial = React.memo(
       <Card.Root
         ref={ref}
         className={getStyle('wrapper', [
-          'border-geyser hover-none border',
+          'hover-none border border-geyser',
           className,
           classActive,
         ])}
       >
-        <Icon className='icon' name='Quote' strokeWidth={'3px'} />
+        <SolidIcon className='icon' name='Quote' />
+
         <p>{review}</p>
         <div className='flex gap-4'>
           <Image

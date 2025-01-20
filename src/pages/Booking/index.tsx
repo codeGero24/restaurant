@@ -1,4 +1,4 @@
-import Reservation from '@components/ui/Reservation';
+import Reservation from '@components/Reservation';
 
 export default function BookingPage() {
   return (

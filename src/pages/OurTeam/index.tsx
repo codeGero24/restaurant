@@ -1,4 +1,4 @@
-import TeamMembers from '@components/ui/TeamMembers';
+import TeamMembers from '@components/TeamMembers';
 
 // - Mock
 import { MEMBERS } from '@mock/index';

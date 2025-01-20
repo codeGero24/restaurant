@@ -1,4 +1,4 @@
-import Testimonial from '@components/ui/Testimonial';
+import Testimonial from '@components/Testimonial';
 
 export default function TestimonialPage() {
   return (

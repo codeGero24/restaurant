@@ -1,7 +1,7 @@
 import React from 'react';
 
 // - Types
-import { Tab } from '@types.app/data';
+import { tab } from '@types.app/data';
 
 export interface TabsProps<T> {
   tabs: T[];
@@ -12,7 +12,7 @@ export interface TabsProps<T> {
 const TabInfo = React.lazy(() => import('./TabInfo'));
 const TabMenu = React.lazy(() => import('./TabMenu'));
 
-const Tabs = React.memo<TabsProps<Tab>>(({ className, variant, tabs }) => {
+const Tabs = React.memo<TabsProps<tab>>(({ className, variant, tabs }) => {
   const classNameCustom = className || 'grid grid-cols-1 md:grid-cols-3';
 
   const TabComponent = React.useMemo(() => {
