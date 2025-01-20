@@ -27,7 +27,7 @@ const MenuSection = () => {
         />
         <div className='grid min-h-[500px] grid-cols-1 place-content-start lg:grid-cols-2'>
           {menu.plates.map(plate => (
-            <CardPlate plate={plate} />
+            <CardPlate key={`plate-${plate.id}`} plate={plate} />
           ))}
         </div>
       </AnimationWrapper>

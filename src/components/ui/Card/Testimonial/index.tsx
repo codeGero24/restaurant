@@ -22,6 +22,7 @@ const CardTestimonial = React.memo(
         ref={ref}
         className={getStyle('wrapper', [
           'hover-none border border-geyser',
+          'min-w-[300px] lg:min-w-[420px]',
           className,
           classActive,
         ])}

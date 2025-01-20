@@ -1,4 +1,4 @@
-import Root from '@router/index';
+import RootLayout from '@router/index';
 import About from '@pages/About';
 import HomePage from '@pages/Home';
 import ErrorPage from '@pages/Error';
@@ -12,7 +12,7 @@ import ContactPage from '@pages/Contact';
 export const routes = [
   {
     path: '/',
-    element: <Root />,
+    element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
       {

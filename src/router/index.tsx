@@ -4,7 +4,7 @@ import Footer from '@components/layout/Footer';
 import Button from '@components/ui/Button';
 import Spinner from '@components/ui/Spinner';
 
-export default function Root() {
+export default function RootLayout() {
   return (
     <>
       <div className='mx-auto max-w-screen-xl'>

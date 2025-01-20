@@ -131,6 +131,8 @@ export interface Testimonial {
   img: Img;
 }
 
+export interface Review extends Testimonial {}
+
 // --------------------
 // - Interface Menu
 // --------------------
