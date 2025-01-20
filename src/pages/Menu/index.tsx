@@ -1,9 +1,9 @@
-import Section from '@components/layout/Section';
+import MenuSection from '@components/MenuSection';
 
 export default function MenuPage() {
   return (
     <>
-      <Section.Root title='Food Menu' subtitle='Most Popilar Items'></Section.Root>
+      <MenuSection />
     </>
   );
 }
