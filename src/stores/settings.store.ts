@@ -27,8 +27,11 @@ const useSettingsStore = create<SettingsState & SettingsActions>(set => ({
 const setSettings = (state: SettingsActions) => state.setSettings;
 
 // GETTERS
+const getAppName = (state: SettingsState) => state.settings.appName;
+const getBookingFormFields = (state: SettingsState) => state.settings.bookingFormFields;
+const getHeaderItems = (state: SettingsState) => state.settings.headerItems;
 const getSettings = (state: SettingsState) => state.settings;
 
-export { setSettings, getSettings };
+export { setSettings, getAppName, getBookingFormFields, getHeaderItems, getSettings };
 
 export default useSettingsStore;

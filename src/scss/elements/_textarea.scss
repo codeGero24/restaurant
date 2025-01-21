@@ -2,7 +2,7 @@
 @use '@scss/utils/functions' as *;
 
 .textarea {
-  padding: um(32) um(12);
+  padding: um(24) um(12) um(48);
   width: 100%;
   border-radius: 4px;
   background-color: white;
@@ -13,6 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
     height: 100%;
     padding: um(20) um(12);
     pointer-events: none;
@@ -27,7 +28,12 @@
     outline: 0;
     box-shadow: 0 0 0 6px rgba(254, 161, 22, 0.25);
 
-    & ~ .label {
+    &::placeholder {
+      opacity: 0;
+    }
+
+    & + .label {
+      opacity: 1;
       padding: um(4) um(12);
       font-size: 12px;
     }

@@ -1,7 +1,11 @@
 import React from 'react';
 import { clsx } from 'clsx';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
-import { formatDate } from '@utils/index';
+import InputField from '@components/ui/Form/InputField';
+import SelectField from '@components/ui/Form/SelectField';
+import TextAreaField from '@components/ui/Form/TextAreaField';
+
+import useSettingsStore from '@stores/settings.store';
 
 /* Types */
 import { animation } from '@types.app/index';
@@ -13,57 +17,47 @@ interface FormReservationProps {
 const FormReservation = React.memo(
   ({ className, animation = 'animate-slide-in-up' }: FormReservationProps) => {
     const classNameCustom = className || 'flex flex-wrap gap-4 lg:grid-cols-2';
-    const defaulDateValue = formatDate(new Date());
+    const { settings } = useSettingsStore();
+
+    const formFields = React.useMemo(() => {
+      return settings?.bookingFormFields?.map(field => {
+        switch (field.type) {
+          case 'textarea':
+            return <TextAreaField field={field} />;
+          case 'select':
+            return <SelectField field={field} />;
+          default:
+            return <InputField field={field} />;
+        }
+      });
+    }, [settings]);
 
     return (
       <AnimationWrapper as='form' animation={animation} className={classNameCustom}>
         <>
-          <div className='relative w-full lg:w-[48.5%]'>
-            <input
-              id='name'
-              type='text'
-              name='name'
-              className='input'
-            />
-             <label htmlFor='name' className='label' >Your Name</label>
-          </div>
-          <div className='relative w-full lg:w-[48.5%]'>
-            <input
-              id='email'
-              type='text'
-              name='email'
-              className='input'
-            />
-            <label htmlFor='email' className='label' >Your Email</label>
-          </div>
-          <div className='relative w-full lg:w-[48.5%]'>
-            <input
-              id='date'
-              type='datetime-local'
-              name='datetime-local'
-              defaultValue={defaulDateValue}
-              className='input'
-            />
-            <label htmlFor='datetime-local' className='label'>
-              Data & Time
-            </label>
-          </div>
-          <div className='relative w-full lg:w-[48.5%]'>
-            <select id='people' name='people' defaultValue='people-1' className='select'>
-              <option value='people-1'>People 1</option>
-              <option value='people-2'>People 2</option>
-              <option value='people-3'>People 2</option>
-            </select>
-            <label className='label' htmlFor='people'>
-              No Of People
-            </label>
-          </div>
-          <div className='relative w-[99.5%]'>
-            <textarea id='notes' name='notes' className='textarea' maxLength={256} />
-            <label htmlFor='notes' className='label'>
-              Special Request
-            </label>
-          </div>
+          {/*           
+          <InputField field={{ name: 'name', type: 'text', placeholder: 'Your Name' }} />
+          <InputField
+            field={{ name: 'email', type: 'text', placeholder: 'Your Email' }}
+          />
+          <InputField
+            field={{ name: 'date', type: 'datetime-local', placeholder: 'Data & Time' }}
+          />
+          <SelectField
+            field={{
+              name: 'people',
+              placeholder: 'No Of People',
+              defaultValue: 'people-1',
+              options: [
+                { value: 'people-1', label: 'People 1' },
+                { value: 'people-2', label: 'People 2' },
+                { value: 'people-3', label: 'People 3' },
+              ],
+            }}
+          />
+          <TextAreaField field={{ name: 'notes', placeholder: 'Special Request' }} />
+          */}
+          {formFields}
           <button
             type='submit'
             className={clsx('button', 'w-full px-4 py-3 uppercase lg:py-4')}

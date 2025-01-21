@@ -90,7 +90,12 @@ export default function Footer() {
             <p>Subscribe to our newsletter to get the latest updates.</p>
             <form className='relative'>
               <div className='relative w-full'>
-                <input type='email' name='email-newsletter' className='input' />
+                <input
+                  type='email'
+                  name='email-newsletter'
+                  placeholder='Your Email'
+                  className='input'
+                />
                 <label htmlFor='email-newsletter' className='label text-gray-800'>
                   Your Email
                 </label>

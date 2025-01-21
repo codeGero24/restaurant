@@ -21,12 +21,21 @@ export type menu = {
 };
 
 // --------------------------------------
+// - type option - SelectField          -
+// --------------------------------------
+type option = {
+  value: string;
+  label: string;
+};
+
+// --------------------------------------
 // - type bookingFields                 -
 // --------------------------------------
 export type bookingFields = {
   type: string;
   name: string;
-  placeholder: string;
+  placeholder?: string;
+  options?: option[];
 };
 
 // --------------------------------------

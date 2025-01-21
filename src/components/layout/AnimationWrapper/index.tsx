@@ -35,7 +35,7 @@ const AnimationWrapper = ({
   }, [animation, duration, delay, inView]);
 
   return (
-    <TagHtml ref={ref} className={clsx(animationClass, className)}>
+    <TagHtml ref={ref} className={clsx(animationClass, className)} {...props}>
       {props.children}
     </TagHtml>
   );
