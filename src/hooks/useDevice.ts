@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function useDevice(threshold = 1024) {
+const useDevice = (threshold: number = 1024) => {
   const [device, setDevice] = React.useState<string>('');
 
   React.useEffect(() => {
@@ -23,4 +23,6 @@ export default function useDevice(threshold = 1024) {
   }, [threshold]);
 
   return { device, isDesktop: device === 'desktop', isMobile: device === 'mobile' };
-}
+};
+
+export default useDevice;

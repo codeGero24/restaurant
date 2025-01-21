@@ -131,7 +131,13 @@ export interface Testimonial {
   img: Img;
 }
 
-export interface Review extends Testimonial {}
+export interface Review {
+  id: string | number;
+  review: string;
+  name: string;
+  profession: string;
+  img: Img;
+}
 
 // --------------------
 // - Interface Menu

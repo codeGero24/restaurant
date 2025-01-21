@@ -1,18 +1,20 @@
-export type animation =
-  | 'animate-none'
-  | 'animate-spin'
-  | 'animate-ping'
-  | 'animate-pulse'
-  | 'animate-pulse-border'
-  | 'animate-bounce'
-  | 'animate-fede-in'
-  | 'animate-fede-in-slow'
-  | 'animate-zoom-in'
-  | 'animate-zoom-out'
-  | 'animate-spin-slow'
-  | 'animate-slide-in-up'
-  | 'animate-slide-in-down'
-  | 'animate-slide-in-right'
-  | 'animate-slide-in-left';
+type animationText =
+  | 'none'
+  | 'spin'
+  | 'ping'
+  | 'pulse'
+  | 'pulse-border'
+  | 'bounce'
+  | 'fede-in'
+  | 'fede-in-slow'
+  | 'zoom-in'
+  | 'zoom-out'
+  | 'spin-slow'
+  | 'slide-in-up'
+  | 'slide-in-down'
+  | 'slide-in-right'
+  | 'slide-in-left';
+
+export type animation = `animate-${animationText}`;
 
 export type duration = `duration-[${number}ms]`;

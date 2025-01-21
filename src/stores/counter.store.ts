@@ -29,6 +29,4 @@ const setReset = (state: CounterActions) => state.decrement;
 // GETTERS
 const getCount = (state: CounterState) => state.count;
 
-export { setIncrement, setDecrement, setReset, getCount };
-
-export default useCounterStore;
+export { setIncrement, setDecrement, setReset, getCount, useCounterStore };

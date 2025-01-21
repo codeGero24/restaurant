@@ -19,7 +19,7 @@ export const normalizeReviews = (res: ReviewesResponse): Review[] | undefined =>
   }
 };
 
-export const getReviews = async () => {
+export const getReviews = async (): Promise<Review[] | undefined> => {
   const config: AxiosRequestConfig = {
     url: '/reviews',
     method: 'get',

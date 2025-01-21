@@ -21,13 +21,12 @@ const CardTestimonial = React.memo(
       <Card.Root
         ref={ref}
         className={getStyle('wrapper', [
-          'hover-none border border-geyser',
-          'min-w-[300px] lg:min-w-[420px]',
+          'hover-none w-full border border-geyser',
           className,
           classActive,
         ])}
       >
-        <SolidIcon className='icon' name='Quote' />
+        <SolidIcon className='icon md' name='Quote' />
 
         <p>{review}</p>
         <div className='flex gap-4'>
