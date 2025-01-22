@@ -1,6 +1,6 @@
-import { Tab } from '@types.app/index';
+import { tab } from '@types.app/index';
 
-export const tabsContact: Tab[] = [
+export const tabsContact: tab[] = [
   {
     title: 'Booking',
     content: 'book@example.com',

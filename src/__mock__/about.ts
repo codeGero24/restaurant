@@ -7,7 +7,7 @@ import { generateImage, generateMember, generateSocials } from './generate.data'
 
 const userMe: Member = {
   id: 999,
-  img: { src: '/img/me.jpg', alt: 'calogero' },
+  img: { src: '/img/me.png', alt: 'calogero' },
   name: 'Calogero Messina',
   role: 'Fe-developer',
   socials: generateSocials('michaelmess_97'),

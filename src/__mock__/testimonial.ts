@@ -10,7 +10,7 @@ const me = {
   name: 'Calogero Messina',
   profession: 'Fe developer',
   img: {
-    src: '/img/me.jpg',
+    src: '/img/me.png',
     alt: 'calogero',
   },
 };
