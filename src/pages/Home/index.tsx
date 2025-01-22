@@ -12,10 +12,12 @@ import AnimationWrapper from '@components/layout/AnimationWrapper';
 import { Service } from '@types.app/data';
 // - Mock
 import { SERVICES } from '@mock/index';
+import Skeleton from '@components/ui/Skeleton';
 
 export default function HomePage() {
   return (
     <>
+      <Skeleton name='card' />
       {/* SERVICES */}
       <Section.Root>
         {SERVICES.map((service: Service, index: number) => (

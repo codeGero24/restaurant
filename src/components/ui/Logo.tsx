@@ -9,7 +9,7 @@ export default function Logo() {
     <Link to='/'>
       <h1 className='flex items-center gap-4 text-primary'>
         <Icon name='UtensilsCrossed' className='icon' strokeWidth={'2.5px'} />
-        {data?.appName}
+        {data?.appName || 'Reastaurant'}
       </h1>
     </Link>
   );

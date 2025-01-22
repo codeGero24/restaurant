@@ -9,6 +9,7 @@ type animationText =
   | 'fede-in-slow'
   | 'zoom-in'
   | 'zoom-out'
+  | 'gradient-shimmer'
   | 'spin-slow'
   | 'slide-in-up'
   | 'slide-in-down'
