@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className='flex w-1/3 justify-end lg:w-2/3'>
+      <nav className='flex justify-end lg:w-2/3'>
         {/* NavPages - Desktop */}
         {isDesktop && (
           <ul className='flex items-center justify-between gap-6'>

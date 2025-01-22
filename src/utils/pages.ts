@@ -5,8 +5,14 @@ export const getAllPages = () => routes[0].children as Page[];
 
 export const findPage = (path: string) => getAllPages().find(page => page.path === path);
 
-export const isCurrentPage = (currentPath: string, path: string): boolean => {
+export const isActivePage = (currentPath: string, path?: string): boolean => {
   return currentPath === path;
+};
+
+export const isActivePageGroup = (currentPath: string): boolean => {
+  const pageGroup = ['/booking', '/testimonial', '/team'];
+  const isPageGroup = Boolean(pageGroup.find(path => currentPath === path));
+  return isPageGroup;
 };
 
 export const groupedPageBygroup = (pages: Page[]): [string, Page[]][] => {

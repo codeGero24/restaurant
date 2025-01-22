@@ -11,7 +11,7 @@ export type getMainPagesParams = {
   excludePath?: string;
 };
 
-export type isCurrentPageParams = {
+export type isActivePageParams = {
   // - location: Location;
   path: string;
 };

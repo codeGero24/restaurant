@@ -8,7 +8,8 @@ import Section from '@components/layout/Section';
 import AnimationWrapper from '@components/layout/AnimationWrapper';
 
 // - Types
-import type { AboutUs } from '@types.app/index'; // - Mock
+import type { AboutUs } from '@types.app/index';
+// - Mock
 import { ABOUT_DATA } from '@mock/index';
 
 interface AboutUsProps {

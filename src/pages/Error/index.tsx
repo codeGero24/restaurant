@@ -5,7 +5,11 @@ type Error = {
   message?: string;
 };
 
-export default function ErrorPage() {
+interface ErrorPageProps {
+  message?: string;
+}
+
+export default function ErrorPage({ message }: ErrorPageProps) {
   const error = useRouteError() as Error;
 
   return (
@@ -17,6 +21,12 @@ export default function ErrorPage() {
         <h1 className='mb-2 text-center text-2xl font-bold uppercase'>Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>
         <p>
+          {message && (
+            <>
+              <i>{message}</i>
+              <br />
+            </>
+          )}
           <i>{error.statusText || error.message}</i>
         </p>
         <Link className='text-cyan-50 underline underline-offset-4' to='/'>

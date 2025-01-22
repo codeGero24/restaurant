@@ -1,6 +1,5 @@
+import React from 'react';
 import RootLayout from '@router/index';
-import About from '@pages/About';
-import HomePage from '@pages/Home';
 import ErrorPage from '@pages/Error';
 import ServicePage from '@pages/Service';
 import MenuPage from '@pages/Menu';
@@ -9,7 +8,15 @@ import OurTeamPage from '@pages/OurTeam';
 import TestimonialPage from '@pages/Testimonial';
 import ContactPage from '@pages/Contact';
 
-export const routes = [
+// -Types
+import { Rout } from '@types.app/router';
+import SkeletonLoader from '@components/ui/Skeleton/Loader';
+import Skeleton from '@components/ui/Skeleton';
+
+const About = React.lazy(() => import('@pages/About'));
+const HomePage = React.lazy(() => import('@pages/Home'));
+
+export const routes: Rout[] = [
   {
     path: '/',
     element: <RootLayout />,
@@ -19,13 +26,21 @@ export const routes = [
         path: '/',
         name: 'Home',
         title: 'Home',
-        element: <HomePage />,
+        element: (
+          <React.Suspense fallback={<Skeleton name='loader' />}>
+            <HomePage />
+          </React.Suspense>
+        ),
       },
       {
         path: '/about',
         name: 'About',
         title: 'About Us',
-        element: <About />,
+        element: (
+          <React.Suspense fallback={<SkeletonLoader />}>
+            <About />
+          </React.Suspense>
+        ),
       },
       {
         path: '/service',

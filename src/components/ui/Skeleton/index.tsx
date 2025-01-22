@@ -2,14 +2,17 @@ import React from 'react';
 import SkeletonCard from '@components/ui/Skeleton/Card';
 import SkeletonInput from '@components/ui/Skeleton/Input';
 import SkeletonTextArea from '@components/ui/Skeleton/TextArea';
+import SkeletonLoader from './Loader';
 
 export interface SkeletonProps {
-  name: 'card' | 'input' | 'textarea';
+  name: 'loader' | 'card' | 'input' | 'textarea';
 }
 
 const Skeleton = React.memo<SkeletonProps>(({ name }) => {
   const SkeletonComponent = React.useMemo(() => {
     switch (name) {
+      case 'loader':
+        return SkeletonLoader;
       case 'card':
         return SkeletonCard;
       case 'input':

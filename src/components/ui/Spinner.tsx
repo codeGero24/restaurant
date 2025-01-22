@@ -9,7 +9,7 @@ interface SpinnerProps {
 }
 
 export default function Spinner({
-  size = 16,
+  size = 64,
   color = 'text-primary',
   className = '',
 }: SpinnerProps) {
@@ -18,6 +18,7 @@ export default function Spinner({
   React.useEffect(() => {
     const html = document.querySelector('html');
     html?.classList.add('overflow-hidden');
+
     const handlePageLoad = () => {
       html?.classList.remove('overflow-hidden');
       setLoading(false);
@@ -38,7 +39,7 @@ export default function Spinner({
     <div
       role='status'
       className={clsx(
-        'z-50 flex h-screen items-center justify-center bg-white',
+        'z-50 flex h-screen animate-fede-in items-center justify-center bg-white',
         className,
         loading ? 'block' : 'hidden'
       )}
