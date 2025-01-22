@@ -16,7 +16,7 @@ export default function ContactPage() {
           {/* Tab Content */}
           <Tabs tabs={tabsContact} variant='info' />
         </Section.Header>
-        <Section.Content className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
+        <Section.Content className='grid grid-cols-1 gap-8 lg:grid-cols-2'>
           {/* Maps */}
           <Maps />
           {/* FORM Content */}

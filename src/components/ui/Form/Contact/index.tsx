@@ -4,6 +4,8 @@ import AnimationWrapper from '@components/layout/AnimationWrapper';
 
 /* Types */
 import { animation } from '@types.app/index';
+import InputField from '../InputField';
+import TextAreaField from '../TextAreaField';
 
 interface FormContactProps {
   className?: string;
@@ -16,37 +18,15 @@ const FormContact = React.memo(
     return (
       <AnimationWrapper as='form' animation={animation} className={classNameCustom}>
         <>
-          <div className='relative w-full lg:w-[49%]'>
-            <input id='name' type='text' name='name' className='input' />
-            <label htmlFor='name' className='label'>
-              Your Name
-            </label>
-          </div>
-          <div className='relative w-full lg:w-[49%]'>
-            <input id='email' type='text' name='email' className='input' />
-            <label htmlFor='email' className='label'>
-              Your Email
-            </label>
-          </div>
-
-          <div className='relative w-full'>
-            <input
-              id='subject'
-              type='text'
-              name='subject'
-              className='input border-gray-300'
-            />
-            <label htmlFor='subject' className='label'>
-              Subject
-            </label>
-          </div>
-
-          <div className='relative w-full'>
-            <textarea id='notes' name='notes' className='textarea' maxLength={256} />
-            <label htmlFor='notes' className='label'>
-              Message
-            </label>
-          </div>
+          <InputField field={{ name: 'name', type: 'text', placeholder: 'Your Name' }} />
+          <InputField
+            field={{ name: 'email', type: 'text', placeholder: 'Your Email' }}
+          />
+          <InputField
+            field={{ name: 'subject', type: 'text', placeholder: 'Subject' }}
+            className='relative w-full'
+          />
+          <TextAreaField field={{ name: 'notes', placeholder: 'Message' }} />
           <button
             type='submit'
             className={clsx('button', 'w-full px-4 py-3 uppercase lg:py-4')}
