@@ -1,41 +1,47 @@
-import { routes } from '@router/routes';
-import { Page, getMainPagesParams } from '@types.app/utils';
+import { page } from '@types.app/index';
+import { navPages, navPagesGroup } from '@constants/navbar';
 
-export const getAllPages = () => routes[0].children as Page[];
-
-export const findPage = (path: string) => getAllPages().find(page => page.path === path);
+export const findPage = (path: string, pages: page[]) => {
+  const allPage = pages?.length ? pages : navPages;
+  return allPage.find(page => page.path === path);
+};
 
 export const isActivePage = (currentPath: string, path?: string): boolean => {
   return currentPath === path;
 };
 
-export const isActivePageGroup = (currentPath: string): boolean => {
-  const pageGroup = ['/booking', '/testimonial', '/team'];
-  const isPageGroup = Boolean(pageGroup.find(path => currentPath === path));
+export const isActivePageGroup = (currentPath: string, pagesGroup?: page[]): boolean => {
+  pagesGroup = pagesGroup || navPagesGroup;
+  const isPageGroup = Boolean(pagesGroup.find(page => currentPath === page.path));
   return isPageGroup;
 };
 
-export const groupedPageBygroup = (pages: Page[]): [string, Page[]][] => {
-  type acc = { [key: string]: Page[] };
+export const groupedPageByGroup = (pages: page[]): [string, page[]][] => {
+  // Ordina le pagine in base all'ordine
+  const sortedPages = [...pages].sort((a, b) => {
+    const orderA = a.order || Infinity;
+    const orderB = b.order || Infinity;
+    return orderA - orderB;
+  });
 
-  const gropedPage = pages.reduce((acc: acc, page: Page) => {
-    const group = page.group || 'ungrouped';
-    if (!acc[group]) {
-      acc[group] = [];
-    }
-    acc[group].push(page);
-    return acc;
-  }, {});
+  // Raggruppa le pagine mantenendo l'ordine
+  const groupedPages = sortedPages.reduce(
+    (acc, page) => {
+      const group = page.group || 'ungrouped';
+      if (!acc[group]) {
+        acc[group] = [];
+      }
+      acc[group].push(page);
+      return acc;
+    },
+    {} as { [key: string]: page[] }
+  );
 
-  return Object.entries(gropedPage).filter(([group]) => group !== 'ungrouped');
+  // Converti l'oggetto raggruppato in un array di tuple
+  return Object.entries(groupedPages);
 };
 
-export const getPagesGroup = (pages?: Page[]) => {
-  const allPage = pages?.length ? pages : getAllPages();
-  return groupedPageBygroup(allPage);
-};
-
-export const getMainPages = ({ pages, excludePath }: getMainPagesParams) => {
-  const allPage = pages?.length ? pages : getAllPages();
-  return allPage.filter(page => Boolean(!page.group) && page.path !== excludePath);
+export const getPagesByGroup = (pages?: page[]) => {
+  const allPage = pages?.length ? pages : navPages;
+  return groupedPageByGroup(allPage);
 };
