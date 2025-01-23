@@ -23,11 +23,11 @@ const FormReservation = React.memo(
       return settings?.bookingFormFields?.map(field => {
         switch (field.type) {
           case 'textarea':
-            return <TextAreaField field={field} />;
+            return <TextAreaField key={field.type} field={field} />;
           case 'select':
-            return <SelectField field={field} />;
+            return <SelectField key={field.type} field={field} />;
           default:
-            return <InputField field={field} />;
+            return <InputField key={field.type} field={field} />;
         }
       });
     }, [settings]);

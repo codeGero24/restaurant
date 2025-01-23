@@ -2,7 +2,7 @@ export type RoutChildren = {
   path: string;
   name: string;
   title: string;
-  element: React.ReactNode;
+  element: JSX.Element;
   group?: string;
   requiresAuth?: boolean;
   roles?: string[];
@@ -10,7 +10,7 @@ export type RoutChildren = {
 
 export interface Rout {
   path: string;
-  element: React.ReactNode;
-  errorElement: React.ReactNode;
+  element: JSX.Element;
+  errorElement: JSX.Element;
   children: RoutChildren[];
 }

@@ -1,17 +1,10 @@
-export type Page = {
-  path: string;
-  name: string;
-  title: string;
-  group: string | undefined;
-  element: JSX.Element;
-};
+import { RoutChildren } from "@types.app/router";
 
 export type getMainPagesParams = {
-  pages?: Page[];
+  pages?: RoutChildren[];
   excludePath?: string;
 };
 
 export type isActivePageParams = {
-  // - location: Location;
   path: string;
 };

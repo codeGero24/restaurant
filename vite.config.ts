@@ -10,6 +10,7 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets'),
       '@mock': path.resolve(__dirname, './src/__mock__'),
       '@components': path.resolve(__dirname, './src/components'),
+      '@constants': path.resolve(__dirname, './src/constants'),
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@providers': path.resolve(__dirname, './src/providers'),
