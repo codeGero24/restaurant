@@ -148,7 +148,7 @@ Apache License Version 2.0
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Calogero Michael Messina - [@linkedin](https://www.linkedin.com/in/calogero-michael-messina-b3832013b/) - c.messina97engineer@gmail.com
 
 Project Link: [https://github.com/codeGero24/restaurant](https://github.com/codeGero24/restaurant)
 

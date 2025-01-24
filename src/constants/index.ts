@@ -1,1 +1,1 @@
-export * from '@constants/navbar'
+export * from '@constants/navbar';

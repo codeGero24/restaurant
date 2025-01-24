@@ -1,8 +1,10 @@
 import { Service } from '@types.app/index';
 
+const subtitle = 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam';
+
 export const SERVICES: Service[] = [
   {
-    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle,
     icon: {
       name: 'UserRoundCog',
       className: 'icon md',
@@ -11,7 +13,7 @@ export const SERVICES: Service[] = [
     title: 'Master Chefs',
   },
   {
-    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle,
     icon: {
       name: 'Utensils',
       className: 'icon md',
@@ -20,7 +22,7 @@ export const SERVICES: Service[] = [
     title: 'Quality Food',
   },
   {
-    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle,
     icon: {
       name: 'ShoppingCart',
       className: 'icon md',
@@ -29,7 +31,7 @@ export const SERVICES: Service[] = [
     title: 'Online Order',
   },
   {
-    subtitle: 'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam',
+    subtitle,
     icon: {
       name: 'Headset',
       className: 'icon md',
